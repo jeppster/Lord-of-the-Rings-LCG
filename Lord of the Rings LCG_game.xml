@@ -1,126 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <game xml_version="1.5">
-
-<sides paths="Lord of the Rings LCG_background.png">
-<board>Main board</board>
-</sides>
-<sides paths="Lord of the Rings LCG_Sphereboard.png">
-<board>Sphere cards</board>
-</sides>
-
-<!--Card Locations-->
-<location_type type="stack">
-<size width="143" height="200">	
-<valid_types types="leadership_coresolo">
-<corner_coord board="1" x="10" y="10">
-	<location>location_sphere_leadership_main</location>
-</corner_coord>
-</valid_types>
-<valid_types types="lore_coresolo">
-<corner_coord board="1" x="173" y="10">
-	<location>location_sphere_lore_main</location>
-</corner_coord>
-</valid_types>
-<valid_types types="spirit_coresolo">
-<corner_coord board="1" x="336" y="10">
-	<location>location_sphere_spirit_main</location>
-</corner_coord>
-</valid_types>
-<valid_types types="tactics_coresolo">
-<corner_coord board="1" x="499" y="10">
-	<location>location_sphere_tactics_main</location>
-</corner_coord>
-</valid_types>
-
-<location_in_action action="move_piece_at_location" args="location_sphere_leadership_coresolo_process,location_sphere_leadership_coresolo_discard">
-<location_in_action action="move_piece_at_location" args="location_sphere_leadership_main,location_sphere_leadership_coresolo_process">
-<valid_types types="leadership_coresolo">
-<corner_coord board="1" x="10" y="220">
-	<location>location_sphere_leadership_coresolo_process</location>
-</corner_coord>
-</valid_types>
-</location_in_action>
-</location_in_action>
-
-<location_in_action action="move_piece_at_location" args="location_sphere_lore_coresolo_process,location_sphere_lore_coresolo_discard">
-<location_in_action action="move_piece_at_location" args="location_sphere_lore_main,location_sphere_lore_coresolo_process">
-<valid_types types="lore_coresolo">
-<corner_coord board="1" x="173" y="220">
-	<location>location_sphere_lore_coresolo_process</location>
-</corner_coord>
-</valid_types>
-</location_in_action>
-</location_in_action>
-
-<location_in_action action="move_piece_at_location" args="location_sphere_spirit_coresolo_process,location_sphere_spirit_coresolo_discard">
-<location_in_action action="move_piece_at_location" args="location_sphere_spirit_main,location_sphere_spirit_coresolo_process">
-<valid_types types="spirit_coresolo">
-<corner_coord board="1" x="336" y="220">
-	<location>location_sphere_spirit_coresolo_process</location>
-</corner_coord>
-</valid_types>
-</location_in_action>
-</location_in_action>
-
-<location_in_action action="move_piece_at_location" args="location_sphere_tactics_coresolo_process,location_sphere_tactics_coresolo_discard">
-<location_in_action action="move_piece_at_location" args="location_sphere_tactics_main,location_sphere_tactics_coresolo_process">
-<valid_types types="tactics_coresolo">
-<corner_coord board="1" x="499" y="220">
-	<location>location_sphere_tactics_coresolo_process</location>
-</corner_coord>
-</valid_types>
-</location_in_action>
-</location_in_action>
-
-<valid_types types="blah">
-<corner_coord board="0" x="-200" y="-250">
-	<location>location_sphere_leadership_coresolo_discard</location>
-</corner_coord>
-</valid_types>
-<valid_types types="blah">
-<corner_coord board="0" x="-200" y="-250">
-	<location>location_sphere_lore_coresolo_discard</location>
-</corner_coord>
-</valid_types>
-<valid_types types="blah">
-<corner_coord board="0" x="-200" y="-250">
-	<location>location_sphere_spirit_coresolo_discard</location>
-</corner_coord>
-</valid_types>
-<valid_types types="blah">
-<corner_coord board="0" x="-200" y="-250">
-	<location>location_sphere_tactics_coresolo_discard</location>
-</corner_coord>
-</valid_types>
-
-</size>
-</location_type>
-
-<!--card pieces -->
-
-<initial_location name="location_sphere_leadership_main">
-<piece_type type="leadership_coresolo">
-<sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Brok Ironfist.png">
-	<piece>cards_deck_coresolo_leadership_1</piece>
-</sides>
-<sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Faramir.png">
-	<piece>cards_deck_coresolo_leadership_2</piece>
-</sides>
-<sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Guard of the Citadel.png">
-	<piece>cards_deck_coresolo_leadership_3</piece>
-</sides>
-<sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Longbeard Orc Slayer.png">
-	<piece>cards_deck_coresolo_leadership_4</piece>
-</sides>
-<sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Silverlode Archer.png">
-	<piece>cards_deck_coresolo_leadership_5</piece>
-</sides>
-<sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Snowbourn Scout.png">
-	<piece>cards_deck_coresolo_leadership_6</piece>
-</sides>
-</piece_type>
-</initial_location>
-
-
-
-
+  <sides paths="Lord of the Rings LCG_background.png">
+    <board>Main board</board>
+  </sides>
+  <sides paths="Lord of the Rings LCG_Sphereboard.png">
+    <board>Sphere cards</board>
+  </sides>
+  <!--Sphere Locations-->
+  <location_type type="stack">
+    <size width="143" height="200">
+      <!--Main stock Locations-->
+      <valid_types types="leadership_coresolo">
+        <corner_coord board="1" x="10" y="10">
+          <location>location_sphere_leadership_main</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="lore_coresolo">
+        <corner_coord board="1" x="173" y="10">
+          <location>location_sphere_lore_main</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="spirit_coresolo">
+        <corner_coord board="1" x="336" y="10">
+          <location>location_sphere_spirit_main</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="tactics_coresolo">
+        <corner_coord board="1" x="499" y="10">
+          <location>location_sphere_tactics_main</location>
+        </corner_coord>
+      </valid_types>
+      <!--Deck processing Locations-->
+      <location_in_action action="move_piece_at_location" args="location_sphere_leadership_coresolo_process,location_sphere_leadership_coresolo_discard">
+        <location_in_action action="move_piece_at_location" args="location_sphere_leadership_main,location_sphere_leadership_coresolo_process">
+          <valid_types types="leadership_coresolo">
+            <corner_coord board="1" x="10" y="220">
+              <location>location_sphere_leadership_coresolo_process</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <location_in_action action="move_piece_at_location" args="location_sphere_lore_coresolo_process,location_sphere_lore_coresolo_discard">
+        <location_in_action action="move_piece_at_location" args="location_sphere_lore_main,location_sphere_lore_coresolo_process">
+          <valid_types types="lore_coresolo">
+            <corner_coord board="1" x="10" y="220">
+              <location>location_sphere_lore_coresolo_process</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <location_in_action action="move_piece_at_location" args="location_sphere_spirit_coresolo_process,location_sphere_spirit_coresolo_discard">
+        <location_in_action action="move_piece_at_location" args="location_sphere_spirit_main,location_sphere_spirit_coresolo_process">
+          <valid_types types="spirit_coresolo">
+            <corner_coord board="1" x="10" y="220">
+              <location>location_sphere_spirit_coresolo_process</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <location_in_action action="move_piece_at_location" args="location_sphere_tactics_coresolo_process,location_sphere_tactics_coresolo_discard">
+        <location_in_action action="move_piece_at_location" args="location_sphere_tactics_main,location_sphere_tactics_coresolo_process">
+          <valid_types types="tactics_coresolo">
+            <corner_coord board="1" x="10" y="220">
+              <location>location_sphere_tactics_coresolo_process</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <!--Deck processing discard Locations-->
+      <valid_types types="blah">
+        <corner_coord board="0" x="-200" y="-250">
+          <location>location_sphere_leadership_coresolo_discard</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="blah">
+        <corner_coord board="0" x="-200" y="-250">
+          <location>location_sphere_lore_coresolo_discard</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="blah">
+        <corner_coord board="0" x="-200" y="-250">
+          <location>location_sphere_spirit_coresolo_discard</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="blah">
+        <corner_coord board="0" x="-200" y="-250">
+          <location>location_sphere_tactics_coresolo_discard</location>
+        </corner_coord>
+      </valid_types>
+      <!--Deck processing portal Locations-->
+      <location_in_action action="move_piece_at_location" args="location_sphere_leadership_coresolo_drawportal,location_main_draw">
+        <location_in_action action="move_piece_at_location" args="location_sphere_leadership_coresolo_process,location_sphere_leadership_coresolo_drawportal">
+          <valid_types types="leadership_coresolo">
+            <corner_coord board="1" x="10" y="430">
+              <location>location_sphere_leadership_coresolo_drawportal</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <location_in_action action="move_piece_at_location" args="location_sphere_lore_coresolo_drawportal,location_main_draw">
+        <location_in_action action="move_piece_at_location" args="location_sphere_lore_coresolo_process,location_sphere_lore_coresolo_drawportal">
+          <valid_types types="lore_coresolo">
+            <corner_coord board="1" x="10" y="430">
+              <location>location_sphere_lore_coresolo_drawportal</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <location_in_action action="move_piece_at_location" args="location_sphere_spirit_coresolo_drawportal,location_main_draw">
+        <location_in_action action="move_piece_at_location" args="location_sphere_spirit_coresolo_process,location_sphere_spirit_coresolo_drawportal">
+          <valid_types types="spirit_coresolo">
+            <corner_coord board="1" x="10" y="430">
+              <location>location_sphere_spirit_coresolo_drawportal</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+      <location_in_action action="move_piece_at_location" args="location_sphere_tactics_coresolo_drawportal,location_main_draw">
+        <location_in_action action="move_piece_at_location" args="location_sphere_tactics_coresolo_process,location_sphere_tactics_coresolo_drawportal">
+          <valid_types types="tactics_coresolo">
+            <corner_coord board="1" x="10" y="430">
+              <location>location_sphere_tactics_coresolo_drawportal</location>
+            </corner_coord>
+          </valid_types>
+        </location_in_action>
+      </location_in_action>
+    </size>
+  </location_type>
+  <!--Main Locations-->
+  <location_type type="stack">
+    <size width="143" height="200">
+      <!--Main draw location-->
+      <valid_types types="leadership_coresolo,lore_coresolo,spirit_coresolo,tactics_coresolo">
+        <corner_coord board="0" x="871" y="558">
+          <location>location_main_draw</location>
+        </corner_coord>
+      </valid_types>
+    </size>
+  </location_type>
+  <!--pieces -->
+  <!--pieces -->
+  <!--pieces -->
+  <!--pieces -->
+  <!--pieces -->
+  <quad_tap action="shuffle_location">
+    <initial_location name="location_sphere_leadership_main">
+      <piece_type type="leadership_coresolo">
+        <!--allies-->
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Brok Ironfist.png">
+          <piece count="1">cards_deck_coresolo_leadership_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Faramir.png">
+          <piece count="2">cards_deck_coresolo_leadership_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Guard of the Citadel.png">
+          <piece count="3">cards_deck_coresolo_leadership_3</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Longbeard Orc Slayer.png">
+          <piece count="2">cards_deck_coresolo_leadership_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Silverlode Archer.png">
+          <piece count="2">cards_deck_coresolo_leadership_5</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Snowbourn Scout.png">
+          <piece count="3">cards_deck_coresolo_leadership_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Son of Arnor.png">
+          <piece count="2">cards_deck_coresolo_leadership_7</piece>
+        </sides>
+        <!--attachments-->
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Leadership_Steward of Gondor.png">
+          <piece count="2">cards_deck_coresolo_leadership_8</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Leadership_Celebrians Stone.png">
+          <piece count="1">cards_deck_coresolo_leadership_9</piece>
+        </sides>
+        <!--events-->
+        <sides paths="Lord of the Rings LCG_Image_Event_Leadership_Common Cause.png">
+          <piece count="2">cards_deck_coresolo_leadership_10</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Leadership_Ever Vigilant.png">
+          <piece count="2">cards_deck_coresolo_leadership_11</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Leadership_For Gondor.png">
+          <piece count="2">cards_deck_coresolo_leadership_12</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Leadership_Grim Resolve.png">
+          <piece count="1">cards_deck_coresolo_leadership_13</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Leadership_Sneak Attack.png">
+          <piece count="2">cards_deck_coresolo_leadership_14</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Leadership_Valiant Sacrifice.png">
+          <piece count="2">cards_deck_coresolo_leadership_15</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_sphere_lore_main">
+      <piece_type type="lore_coresolo">
+        <!--allies-->
+        <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Daughter of the Nimrodel.png">
+          <piece count="3">cards_deck_coresolo_lore_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Erebor Hammersmith.png">
+          <piece count="2">cards_deck_coresolo_lore_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Gleowine.png">
+          <piece count="2">cards_deck_coresolo_lore_3</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Henamarth Riversong.png">
+          <piece count="1">cards_deck_coresolo_lore_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Miner of the Iron Hills.png">
+          <piece count="2">cards_deck_coresolo_lore_5</piece>
+        </sides>
+        <!--attachments-->
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Lore_Dark Knowledge.png">
+          <piece count="1">cards_deck_coresolo_lore_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Lore_Forest Snare.png">
+          <piece count="2">cards_deck_coresolo_lore_7</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Lore_Protector of Lorien.png">
+          <piece count="2">cards_deck_coresolo_lore_8</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Lore_Self Preservation.png">
+          <piece count="2">cards_deck_coresolo_lore_9</piece>
+        </sides>
+        <!--events-->
+        <sides paths="Lord of the Rings LCG_Image_Event_Lore_Beorns Hospitality.png">
+          <piece count="1">cards_deck_coresolo_lore_10</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Lore_Gandalfs Search.png">
+          <piece count="2">cards_deck_coresolo_lore_11</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Lore_Lore of Imladris.png">
+          <piece count="3">cards_deck_coresolo_lore_12</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Lore_Loriens Wealth.png">
+          <piece count="2">cards_deck_coresolo_lore_13</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Lore_Radagasts Cunning.png">
+          <piece count="2">cards_deck_coresolo_lore_14</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Lore_Secret Paths.png">
+          <piece count="2">cards_deck_coresolo_lore_15</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_sphere_spirit_main">
+      <piece_type type="spirit_coresolo">
+        <!--allies-->
+        <sides paths="Lord of the Rings LCG_Image_Ally_Spirit_Lorien Guide.png">
+          <piece count="3">cards_deck_coresolo_spirit_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Spirit_Northern Tracker.png">
+          <piece count="2">cards_deck_coresolo_spirit_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Spirit_Wandering Took.png">
+          <piece count="2">cards_deck_coresolo_spirit_3</piece>
+        </sides>
+        <!--attachments-->
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Spirit_Power in the Earth.png">
+          <piece count="2">cards_deck_coresolo_spirit_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Spirit_The Favor of the Lady.png">
+          <piece count="2">cards_deck_coresolo_spirit_5</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Spirit_Unexpected Courage.png">
+          <piece count="1">cards_deck_coresolo_spirit_6</piece>
+        </sides>
+        <!--events-->
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_A Light in the Dark.png">
+          <piece count="2">cards_deck_coresolo_spirit_7</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_A Test of Will.png">
+          <piece count="2">cards_deck_coresolo_spirit_8</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Dwarven Tomb.png">
+          <piece count="1">cards_deck_coresolo_spirit_9</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Fortune or Fate.png">
+          <piece count="1">cards_deck_coresolo_spirit_10</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Hasty Stroke.png">
+          <piece count="2">cards_deck_coresolo_spirit_11</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Stand and Fight.png">
+          <piece count="3">cards_deck_coresolo_spirit_12</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Strength of Will.png">
+          <piece count="2">cards_deck_coresolo_spirit_13</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_The Galadhrims Greeting.png">
+          <piece count="2">cards_deck_coresolo_spirit_14</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Will of the West.png">
+          <piece count="2">cards_deck_coresolo_spirit_15</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_sphere_tactics_main">
+      <piece_type type="tactics_coresolo">
+        <!--allies-->
+        <sides paths="Lord of the Rings LCG_Image_Ally_Tactics_Beorn.png">
+          <piece count="1">cards_deck_coresolo_tactics_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Tactics_Gondorian Spearman.png">
+          <piece count="3">cards_deck_coresolo_tactics_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Tactics_Horseback Archer.png">
+          <piece count="2">cards_deck_coresolo_tactics_3</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Ally_Tactics_Veteran Axehand.png">
+          <piece count="3">cards_deck_coresolo_tactics_4</piece>
+        </sides>
+        <!--attachments-->
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Tactics_Blade of Gondolin.png">
+          <piece count="2">cards_deck_coresolo_tactics_5</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Tactics_Citadel Plate.png">
+          <piece count="2">cards_deck_coresolo_tactics_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Tactics_Dwarven Axe.png">
+          <piece count="2">cards_deck_coresolo_tactics_7</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Attachment_Tactics_Horn of Gondor.png">
+          <piece count="1">cards_deck_coresolo_tactics_8</piece>
+        </sides>
+        <!--events-->
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Blade Mastery.png">
+          <piece count="3">cards_deck_coresolo_tactics_9</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Feint.png">
+          <piece count="2">cards_deck_coresolo_tactics_10</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Quick Strike.png">
+          <piece count="2">cards_deck_coresolo_tactics_11</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Rain of Arrows.png">
+          <piece count="2">cards_deck_coresolo_tactics_12</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Stand Together.png">
+          <piece count="1">cards_deck_coresolo_tactics_13</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Swift Strike.png">
+          <piece count="1">cards_deck_coresolo_tactics_14</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Thicket of Spears.png">
+          <piece count="2">cards_deck_coresolo_tactics_15</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+  </quad_tap>
 </game>
