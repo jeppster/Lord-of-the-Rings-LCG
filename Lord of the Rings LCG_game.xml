@@ -7,36 +7,61 @@
     <board>Sphere cards</board>
   </sides>
   <!--Sphere Locations-->
+  <!--Sphere Locations-->
+  <!---->
+  <!--Deck Stock Locations-->
   <location_type type="stack">
     <size width="143" height="200">
       <!--Main stock Locations-->
-      <valid_types types="leadership_coresolo">
+      <valid_types types="leadership">
         <corner_coord board="1" x="10" y="10">
           <location>location_sphere_leadership_main</location>
         </corner_coord>
       </valid_types>
-      <valid_types types="lore_coresolo">
+      <valid_types types="lore">
         <corner_coord board="1" x="173" y="10">
           <location>location_sphere_lore_main</location>
         </corner_coord>
       </valid_types>
-      <valid_types types="spirit_coresolo">
+      <valid_types types="spirit">
         <corner_coord board="1" x="336" y="10">
           <location>location_sphere_spirit_main</location>
         </corner_coord>
       </valid_types>
-      <valid_types types="tactics_coresolo">
+      <valid_types types="tactics">
         <corner_coord board="1" x="499" y="10">
           <location>location_sphere_tactics_main</location>
         </corner_coord>
       </valid_types>
     </size>
   </location_type>
+  <!--End Deck Stock Locations-->
+  <!--Deck Trigger Locations-->
+  <location_type type="cell">
+    <corner_coord board="1" x="10" y="220">
+      <location>location_sphere_decktrigger_leadershipcoresolo</location>
+    </corner_coord>
+    <corner_coord board="1" x="173" y="220">
+      <location>location_sphere_decktrigger_lorecoresolo</location>
+    </corner_coord>
+    <corner_coord board="1" x="336" y="220">
+      <location>location_sphere_decktrigger_spiritcoresolo</location>
+    </corner_coord>
+    <corner_coord board="1" x="499" y="220">
+      <location>location_sphere_decktrigger_tacticscoresolo</location>
+    </corner_coord>
+  </location_type>
+  <!--EndDeck Trigger Locations-->
+  <!---->
+  <!--END Sphere Locations-->
+  <!--END Sphere Locations-->
+  <!---->
+  <!---->
   <!--Main Locations-->
   <location_type type="stack">
     <size width="143" height="200">
       <!--Main draw location-->
-      <valid_types types="leadership_coresolo,lore_coresolo,spirit_coresolo,tactics_coresolo">
+      <valid_types types="leadership,lore,spirit,tactics">
         <corner_coord board="0" x="871" y="558">
           <location>location_main_draw</location>
         </corner_coord>
@@ -48,73 +73,263 @@
   <!--pieces -->
   <!--pieces -->
   <!--pieces -->
-<draggable value="0">
-<triple_tap action="move_piece" args="location_main_draw,cards_leadership_1_0">
-	<triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_0">
-		<triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_1">
-			<triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_0">
-				<triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_1">
-					<triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_2">
-						<triple_tap action="move_piece" args="location_main_draw,cards_leadership_4_0">
-							<triple_tap action="move_piece" args="location_main_draw,cards_leadership_4_1">
-								<triple_tap action="move_piece" args="location_main_draw,cards_leadership_5_0">
-									<triple_tap action="move_piece" args="location_main_draw,cards_leadership_5_1">
-										<triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_0">
-											<triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_1">
-												<triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_2">
-													<triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_0">
-														<triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_1">
-															<triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_0">
-																<triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_1">
-																	<triple_tap action="move_piece" args="location_main_draw,cards_leadership_9_0">
-																		<triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_0">
-																			<triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_1">
-																				<triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_0">
-																					<triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_1">
-																						<triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_0">
-																							<triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_1">
-																								<triple_tap action="move_piece" args="location_main_draw,cards_leadership_13_0">
-																									<triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_0">
-																										<triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_1">
-																											<triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_0">
-																												<triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_1">
-																													<initial_location name="location_sphere_decktrigger_leadershipcoresolo">
-																														<sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
-																												          <piece>decktrigger_leadershipcoresolo</piece>
-																												        </sides>
-	  </triple_tap>
-																											</triple_tap>
-																										</triple_tap>
-																									</triple_tap>
-																								</triple_tap>
-																							</triple_tap>
-																						</triple_tap>
-																					</triple_tap>
-																				</triple_tap>
-																			</triple_tap>
-																		</triple_tap>
-																	</triple_tap>
-																</triple_tap>
-															</triple_tap>
-														</triple_tap>
-													</triple_tap>
-												</triple_tap>
-											</triple_tap>
-										</triple_tap>
-									</triple_tap>
-								</triple_tap>
-							</triple_tap>
-						</triple_tap>
-					</triple_tap>
-				</triple_tap>
-			</triple_tap>
-		</triple_tap>
-	</triple_tap>
-</triple_tap>
-</draggable>
+  <draggable value="0">
+    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_1_0">
+      <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_0">
+        <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_1">
+          <triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_0">
+            <triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_1">
+              <triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_2">
+                <triple_tap action="move_piece" args="location_main_draw,cards_leadership_4_0">
+                  <triple_tap action="move_piece" args="location_main_draw,cards_leadership_4_1">
+                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_5_0">
+                      <triple_tap action="move_piece" args="location_main_draw,cards_leadership_5_1">
+                        <triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_0">
+                          <triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_1">
+                            <triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_2">
+                              <triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_0">
+                                <triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_1">
+                                  <triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_0">
+                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_1">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_leadership_9_0">
+                                        <triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_0">
+                                          <triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_1">
+                                            <triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_0">
+                                              <triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_1">
+                                                <triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_0">
+                                                  <triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_1">
+                                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_13_0">
+                                                      <triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_0">
+                                                        <triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_1">
+                                                          <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_0">
+                                                            <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_1">
+                                                              <initial_location name="location_sphere_decktrigger_leadershipcoresolo">
+                                                                <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
+                                                                  <piece>decktrigger_leadershipcoresolo</piece>
+                                                                </sides>
+                                                              </initial_location>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+    <triple_tap action="move_piece" args="location_main_draw,cards_lore_1_0">
+      <triple_tap action="move_piece" args="location_main_draw,cards_lore_1_1">
+        <triple_tap action="move_piece" args="location_main_draw,cards_lore_1_2">
+          <triple_tap action="move_piece" args="location_main_draw,cards_lore_2_0">
+            <triple_tap action="move_piece" args="location_main_draw,cards_lore_2_1">
+              <triple_tap action="move_piece" args="location_main_draw,cards_lore_3_0">
+                <triple_tap action="move_piece" args="location_main_draw,cards_lore_3_1">
+                  <triple_tap action="move_piece" args="location_main_draw,cards_lore_4_0">
+                    <triple_tap action="move_piece" args="location_main_draw,cards_lore_5_0">
+                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_5_1">
+                        <triple_tap action="move_piece" args="location_main_draw,cards_lore_6_0">
+                          <triple_tap action="move_piece" args="location_main_draw,cards_lore_7_0">
+                            <triple_tap action="move_piece" args="location_main_draw,cards_lore_7_1">
+                              <triple_tap action="move_piece" args="location_main_draw,cards_lore_8_0">
+                                <triple_tap action="move_piece" args="location_main_draw,cards_lore_8_1">
+                                  <triple_tap action="move_piece" args="location_main_draw,cards_lore_9_0">
+                                    <triple_tap action="move_piece" args="location_main_draw,cards_lore_9_1">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_10_0">
+                                        <triple_tap action="move_piece" args="location_main_draw,cards_lore_11_0">
+                                          <triple_tap action="move_piece" args="location_main_draw,cards_lore_11_1">
+                                            <triple_tap action="move_piece" args="location_main_draw,cards_lore_12_0">
+                                              <triple_tap action="move_piece" args="location_main_draw,cards_lore_12_1">
+                                                <triple_tap action="move_piece" args="location_main_draw,cards_lore_12_2">
+                                                  <triple_tap action="move_piece" args="location_main_draw,cards_lore_13_0">
+                                                    <triple_tap action="move_piece" args="location_main_draw,cards_lore_13_1">
+                                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_14_0">
+                                                        <triple_tap action="move_piece" args="location_main_draw,cards_lore_14_1">
+                                                          <triple_tap action="move_piece" args="location_main_draw,cards_lore_15_0">
+                                                            <triple_tap action="move_piece" args="location_main_draw,cards_lore_15_1">
+                                                              <initial_location name="location_sphere_decktrigger_lorecoresolo">
+                                                                <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LoreCoreSolo.png">
+                                                                  <piece>decktrigger_lorecoresolo</piece>
+                                                                </sides>
+                                                              </initial_location>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+    <triple_tap action="move_piece" args="location_main_draw,cards_spirit_1_0">
+      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_1_1">
+        <triple_tap action="move_piece" args="location_main_draw,cards_spirit_1_2">
+          <triple_tap action="move_piece" args="location_main_draw,cards_spirit_2_0">
+            <triple_tap action="move_piece" args="location_main_draw,cards_spirit_2_1">
+              <triple_tap action="move_piece" args="location_main_draw,cards_spirit_3_0">
+                <triple_tap action="move_piece" args="location_main_draw,cards_spirit_3_1">
+                  <triple_tap action="move_piece" args="location_main_draw,cards_spirit_4_0">
+                    <triple_tap action="move_piece" args="location_main_draw,cards_spirit_4_1">
+                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_5_0">
+                        <triple_tap action="move_piece" args="location_main_draw,cards_spirit_5_1">
+                          <triple_tap action="move_piece" args="location_main_draw,cards_spirit_6_0">
+                            <triple_tap action="move_piece" args="location_main_draw,cards_spirit_7_0">
+                              <triple_tap action="move_piece" args="location_main_draw,cards_spirit_7_1">
+                                <triple_tap action="move_piece" args="location_main_draw,cards_spirit_8_0">
+                                  <triple_tap action="move_piece" args="location_main_draw,cards_spirit_8_1">
+                                    <triple_tap action="move_piece" args="location_main_draw,cards_spirit_9_0">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_10_0">
+                                        <triple_tap action="move_piece" args="location_main_draw,cards_spirit_11_0">
+                                          <triple_tap action="move_piece" args="location_main_draw,cards_spirit_11_1">
+                                            <triple_tap action="move_piece" args="location_main_draw,cards_spirit_12_0">
+                                              <triple_tap action="move_piece" args="location_main_draw,cards_spirit_12_1">
+                                                <triple_tap action="move_piece" args="location_main_draw,cards_spirit_12_2">
+                                                  <triple_tap action="move_piece" args="location_main_draw,cards_spirit_13_0">
+                                                    <triple_tap action="move_piece" args="location_main_draw,cards_spirit_13_1">
+                                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_14_0">
+                                                        <triple_tap action="move_piece" args="location_main_draw,cards_spirit_14_1">
+                                                          <triple_tap action="move_piece" args="location_main_draw,cards_spirit_15_0">
+                                                            <triple_tap action="move_piece" args="location_main_draw,cards_spirit_15_1">
+                                                              <initial_location name="location_sphere_decktrigger_spiritcoresolo">
+                                                                <sides paths="Lord of the Rings LCG_Image_DeckTrigger_SpiritCoreSolo.png">
+                                                                  <piece>decktrigger_spiritcoresolo</piece>
+                                                                </sides>
+                                                              </initial_location>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_1_0">
+      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_0">
+        <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_1">
+          <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_2">
+            <triple_tap action="move_piece" args="location_main_draw,cards_tactics_3_0">
+              <triple_tap action="move_piece" args="location_main_draw,cards_tactics_3_1">
+                <triple_tap action="move_piece" args="location_main_draw,cards_tactics_4_0">
+                  <triple_tap action="move_piece" args="location_main_draw,cards_tactics_4_1">
+                    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_4_2">
+                      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_5_0">
+                        <triple_tap action="move_piece" args="location_main_draw,cards_tactics_5_1">
+                          <triple_tap action="move_piece" args="location_main_draw,cards_tactics_6_0">
+                            <triple_tap action="move_piece" args="location_main_draw,cards_tactics_6_1">
+                              <triple_tap action="move_piece" args="location_main_draw,cards_tactics_7_0">
+                                <triple_tap action="move_piece" args="location_main_draw,cards_tactics_7_1">
+                                  <triple_tap action="move_piece" args="location_main_draw,cards_tactics_8_0">
+                                    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_9_0">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_9_1">
+                                        <triple_tap action="move_piece" args="location_main_draw,cards_tactics_9_2">
+                                          <triple_tap action="move_piece" args="location_main_draw,cards_tactics_10_0">
+                                            <triple_tap action="move_piece" args="location_main_draw,cards_tactics_10_1">
+                                              <triple_tap action="move_piece" args="location_main_draw,cards_tactics_11_0">
+                                                <triple_tap action="move_piece" args="location_main_draw,cards_tactics_11_1">
+                                                  <triple_tap action="move_piece" args="location_main_draw,cards_tactics_12_0">
+                                                    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_12_1">
+                                                      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_13_0">
+                                                        <triple_tap action="move_piece" args="location_main_draw,cards_tactics_14_0">
+                                                          <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_0">
+                                                            <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_1">
+                                                              <initial_location name="location_sphere_decktrigger_tacticscoresolo">
+                                                                <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+                                                                  <piece>decktrigger_tacticscoresolo</piece>
+                                                                </sides>
+                                                              </initial_location>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+  </draggable>
   <quad_tap action="shuffle_location">
     <initial_location name="location_sphere_leadership_main">
-      <piece_type type="leadership_coresolo">
+      <piece_type type="leadership">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Brok Ironfist.png">
           <piece count="1">cards_leadership_1</piece>
@@ -166,7 +381,7 @@
       </piece_type>
     </initial_location>
     <initial_location name="location_sphere_lore_main">
-      <piece_type type="lore_coresolo">
+      <piece_type type="lore">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Daughter of the Nimrodel.png">
           <piece count="3">cards_lore_1</piece>
@@ -218,7 +433,7 @@
       </piece_type>
     </initial_location>
     <initial_location name="location_sphere_spirit_main">
-      <piece_type type="spirit_coresolo">
+      <piece_type type="spirit">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Spirit_Lorien Guide.png">
           <piece count="3">cards_spirit_1</piece>
@@ -270,7 +485,7 @@
       </piece_type>
     </initial_location>
     <initial_location name="location_sphere_tactics_main">
-      <piece_type type="tactics_coresolo">
+      <piece_type type="tactics">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Tactics_Beorn.png">
           <piece count="1">cards_tactics_1</piece>
