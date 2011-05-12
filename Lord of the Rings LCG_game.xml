@@ -62,8 +62,19 @@
     <size width="143" height="200">
       <!--Main draw location-->
       <valid_types types="leadership,lore,spirit,tactics">
-        <corner_coord board="0" x="871" y="558">
+        <corner_coord board="0" x="718" y="558">
           <location>location_main_draw</location>
+        </corner_coord>
+        <corner_coord board="0" x="871" y="558">
+          <location>location_main_discard</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands">
+        <corner_coord board="0" x="718" y="10">
+          <location>location_main_encounterdraw</location>
+        </corner_coord>
+        <corner_coord board="0" x="871" y="10">
+          <location>location_main_encounterdiscard</location>
         </corner_coord>
       </valid_types>
     </size>
@@ -328,6 +339,7 @@
     </triple_tap>
   </draggable>
   <quad_tap action="shuffle_location">
+    <!--Player Cards-->
     <initial_location name="location_sphere_leadership_main">
       <piece_type type="leadership">
         <!--allies-->
@@ -533,6 +545,199 @@
         </sides>
         <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Thicket of Spears.png">
           <piece count="2">cards_tactics_15</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <!---->
+    <!--Encounter Cards-->
+    <initial_location name="location_encounter_dolguldurorcs_main">
+      <piece_type type="dolguldurorcs">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Dol Guldur Orcs_Chieftan Ufthak.png">
+          <piece count="1">cards_dolguldurorcs_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Dol Guldur Orcs_Dol Guldur Beastmaster.png">
+          <piece count="2">cards_dolguldurorcs_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Dol Guldur Orcs_Dol Guldur Orcs.png">
+          <piece count="3">cards_dolguldurorcs_3</piece>
+        </sides>
+        <!--locations-->
+        <sides paths="Lord of the Rings LCG_Image_Location_Dol Guldur Orcs_Enchanted Stream.png">
+          <piece count="2">cards_dolguldurorcs_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Location_Dol Guldur Orcs_Necromancers Pass.png">
+          <piece count="2">cards_dolguldurorcs_5</piece>
+        </sides>
+        <!--objectives-->
+        <!--treacheries-->
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Dol Guldur Orcs_Driven by Shadow.png">
+          <piece count="1">cards_dolguldurorcs_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Dol Guldur Orcs_The Necromancers Reach.png">
+          <piece count="3">cards_dolguldurorcs_7</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_encounter_escapefromdolguldur_main">
+      <piece_type type="escapefromdolguldur">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Escape from Dol Guldur_Cavern Guardian.png">
+          <piece count="2">cards_escapefromdolguldur_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Escape from Dol Guldur_Dungeon Jailor.png">
+          <piece count="2">cards_escapefromdolguldur_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Escape from Dol Guldur_Nazgul of Dol Guldur.png">
+          <piece count="1">cards_escapefromdolguldur_3</piece>
+        </sides>
+        <!--locations-->
+        <sides paths="Lord of the Rings LCG_Image_Location_Escape from Dol Guldur_Endless Caverns.png">
+          <piece count="2">cards_escapefromdolguldur_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Location_Escape from Dol Guldur_Tower Gate.png">
+          <piece count="2">cards_escapefromdolguldur_5</piece>
+        </sides>
+        <!--objectives-->
+        <sides paths="Lord of the Rings LCG_Image_Objective_Escape from Dol Guldur_Dungeon Torch.png">
+          <piece count="1">cards_escapefromdolguldur_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Objective_Escape from Dol Guldur_Gandalfs Map.png">
+          <piece count="1">cards_escapefromdolguldur_7</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Objective_Escape from Dol Guldur_Shadow Key.png">
+          <piece count="1">cards_escapefromdolguldur_8</piece>
+        </sides>
+        <!--treacheries-->
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Escape from Dol Guldur_Iron Shackles.png">
+          <piece count="1">cards_escapefromdolguldur_9</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Escape from Dol Guldur_Under the Shadow.png">
+          <piece count="2">cards_escapefromdolguldur_10</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_encounter_journeydowntheanduin_main">
+      <piece_type type="journeydowntheanduin">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Journey Down the Anduin_Misty Mountain Goblins.png">
+          <piece count="3">cards_journeydowntheanduin_1</piece>
+        </sides>
+        <!--locations-->
+        <sides paths="Lord of the Rings LCG_Image_Location_Journey Down the Anduin_Banks of the Anduin.png">
+          <piece count="2">cards_journeydowntheanduin_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Location_Journey Down the Anduin_Gladden Fields.png">
+          <piece count="3">cards_journeydowntheanduin_3</piece>
+        </sides>
+        <!--objectives-->
+        <!--treacheries-->
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Journey Down the Anduin_Massing at Night.png">
+          <piece count="1">cards_journeydowntheanduin_4</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_encounter_passagethroughmirkwood_main">
+      <piece_type type="passagethroughmirkwood">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Passage Through Mirkwood_Black Forest Bats.png">
+          <piece count="1">cards_passagethroughmirkwood_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Passage Through Mirkwood_East Bight Patrol.png">
+          <piece count="1">cards_passagethroughmirkwood_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Passage Through Mirkwood_Forest Spider.png">
+          <piece count="4">cards_passagethroughmirkwood_3</piece>
+        </sides>
+        <!--locations-->
+        <sides paths="Lord of the Rings LCG_Image_Location_Passage Through Mirkwood_Forest Gate.png">
+          <piece count="2">cards_passagethroughmirkwood_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Location_Passage Through Mirkwood_Old Forest Road.png">
+          <piece count="2">cards_passagethroughmirkwood_5</piece>
+        </sides>
+        <!--objectives-->
+        <!--treacheries-->
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_encounter_sauronsreach_main">
+      <piece_type type="sauronsreach">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Saurons Reach_Eastern Crows.png">
+          <piece count="3">cards_sauronsreach_1</piece>
+        </sides>
+        <!--locations-->
+        <!--objectives-->
+        <!--treacheries-->
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Saurons Reach_Evil Storm.png">
+          <piece count="3">cards_sauronsreach_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Saurons Reach_Pursued by Shadow.png">
+          <piece count="2">cards_sauronsreach_3</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Saurons Reach_Treacherous Fog.png">
+          <piece count="2">cards_sauronsreach_4</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_encounter_spidersofmirkwoods_main">
+      <piece_type type="spidersofmirkwood">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Spiders of Mirkwood_Hummerhorns.png">
+          <piece count="1">cards_spidersofmirkwood_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Spiders of Mirkwood_King Spider.png">
+          <piece count="2">cards_spidersofmirkwood_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Spiders of Mirkwood_Ungoliants Spawn.png">
+          <piece count="1">cards_spidersofmirkwood_3</piece>
+        </sides>
+        <!--locations-->
+        <sides paths="Lord of the Rings LCG_Image_Location_Spiders of Mirkwood_Great Forest Web.png">
+          <piece count="2">cards_spidersofmirkwood_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Location_Spiders of Mirkwood_Mountains of Mirkwood.png">
+          <piece count="3">cards_spidersofmirkwood_5</piece>
+        </sides>
+        <!--objectives-->
+        <!--treacheries-->
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Spiders of Mirkwood_Caught in a Web.png">
+          <piece count="2">cards_spidersofmirkwood_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Spiders of Mirkwood_Eyes of the Forest.png">
+          <piece count="1">cards_spidersofmirkwood_7</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_encounter_wilderlands_main">
+      <piece_type type="wilderlands">
+        <!--enemies-->
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Wilderlands_Goblin Sniper.png">
+          <piece count="2">cards_wilderlands_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Wilderlands_Hill Troll.png">
+          <piece count="2">cards_wilderlands_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Wilderlands_Marsh Adder.png">
+          <piece count="1">cards_wilderlands_3</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Wilderlands_Wargs.png">
+          <piece count="2">cards_wilderlands_4</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Enemy_Wilderlands_Wolf Rider.png">
+          <piece count="1">cards_wilderlands_5</piece>
+        </sides>
+        <!--locations-->
+        <sides paths="Lord of the Rings LCG_Image_Location_Wilderlands_The Brown Lands.png">
+          <piece count="2">cards_wilderlands_6</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Location_Wilderlands_The East Bight.png">
+          <piece count="2">cards_wilderlands_7</piece>
+        </sides>
+        <!--objectives-->
+        <!--treacheries-->
+        <sides paths="Lord of the Rings LCG_Image_Treachery_Wilderlands_Despair.png">
+          <piece count="2">cards_wilderlands_8</piece>
         </sides>
       </piece_type>
     </initial_location>
