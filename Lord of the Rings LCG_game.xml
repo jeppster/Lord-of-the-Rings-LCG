@@ -48,6 +48,70 @@
   <!--pieces -->
   <!--pieces -->
   <!--pieces -->
+<draggable value="0">
+<triple_tap action="move_piece" args="location_main_draw,cards_leadership_1_0">
+	<triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_0">
+		<triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_1">
+			<triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_0">
+				<triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_1">
+					<triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_2">
+						<triple_tap action="move_piece" args="location_main_draw,cards_leadership_4_0">
+							<triple_tap action="move_piece" args="location_main_draw,cards_leadership_4_1">
+								<triple_tap action="move_piece" args="location_main_draw,cards_leadership_5_0">
+									<triple_tap action="move_piece" args="location_main_draw,cards_leadership_5_1">
+										<triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_0">
+											<triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_1">
+												<triple_tap action="move_piece" args="location_main_draw,cards_leadership_6_2">
+													<triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_0">
+														<triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_1">
+															<triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_0">
+																<triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_1">
+																	<triple_tap action="move_piece" args="location_main_draw,cards_leadership_9_0">
+																		<triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_0">
+																			<triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_1">
+																				<triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_0">
+																					<triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_1">
+																						<triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_0">
+																							<triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_1">
+																								<triple_tap action="move_piece" args="location_main_draw,cards_leadership_13_0">
+																									<triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_0">
+																										<triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_1">
+																											<triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_0">
+																												<triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_1">
+																													<initial_location name="location_sphere_decktrigger_leadershipcoresolo">
+																														<sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
+																												          <piece>decktrigger_leadershipcoresolo</piece>
+																												        </sides>
+	  </triple_tap>
+																											</triple_tap>
+																										</triple_tap>
+																									</triple_tap>
+																								</triple_tap>
+																							</triple_tap>
+																						</triple_tap>
+																					</triple_tap>
+																				</triple_tap>
+																			</triple_tap>
+																		</triple_tap>
+																	</triple_tap>
+																</triple_tap>
+															</triple_tap>
+														</triple_tap>
+													</triple_tap>
+												</triple_tap>
+											</triple_tap>
+										</triple_tap>
+									</triple_tap>
+								</triple_tap>
+							</triple_tap>
+						</triple_tap>
+					</triple_tap>
+				</triple_tap>
+			</triple_tap>
+		</triple_tap>
+	</triple_tap>
+</triple_tap>
+</draggable>
   <quad_tap action="shuffle_location">
     <initial_location name="location_sphere_leadership_main">
       <piece_type type="leadership_coresolo">
