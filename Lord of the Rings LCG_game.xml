@@ -11,10 +11,10 @@
   <!---->
   <!--Deck Stock Locations-->
   <location_type type="stack">
-    <size width="143" height="200">
+    <size width="215" height="300">
       <!--Main stock Locations-->
       <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
-        <corner_coord board="0" x="-200" y="0">
+        <corner_coord board="0" x="-400" y="0">
           <location>location_main_cardstock</location>
         </corner_coord>
       </valid_types>
@@ -23,18 +23,12 @@
   <!--End Deck Stock Locations-->
   <!--Deck Trigger Locations-->
   <location_type type="cell">
-    <corner_coord board="1" x="10" y="220">
-      <location>location_sphere_decktrigger_leadershipcoresolo</location>
-    </corner_coord>
-    <corner_coord board="1" x="173" y="220">
-      <location>location_sphere_decktrigger_lorecoresolo</location>
-    </corner_coord>
-    <corner_coord board="1" x="336" y="220">
-      <location>location_sphere_decktrigger_spiritcoresolo</location>
-    </corner_coord>
-    <corner_coord board="1" x="499" y="220">
-      <location>location_sphere_decktrigger_tacticscoresolo</location>
-    </corner_coord>
+    <size width="153" height="105">
+      <!--Main stock Locations-->
+      <corner_coord board="1" x="5" y="5">
+        <location rows="2" cols="4">location_sphere_decktriggers</location>
+      </corner_coord>
+    </size>
   </location_type>
   <!--EndDeck Trigger Locations-->
   <!---->
@@ -43,25 +37,61 @@
   <!---->
   <!---->
   <!--Main Locations-->
-  <location_type type="stack">
-    <size width="143" height="200">
+  <location_type type="free">
+    <size width="1024" height="768">
       <!--Main draw location-->
+      <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest,progree,wound,resource">
+        <corner_coord board="0" x="0" y="0">
+          <location>location_main_free</location>
+        </corner_coord>
+      </valid_types>
+    </size>
+  </location_type>
+  <location_type type="stack">
+    <size width="215" height="300">
       <valid_types types="leadership,lore,spirit,tactics">
-        <corner_coord board="0" x="718" y="558">
+        <corner_coord board="0" x="1066" y="832">
           <location>location_main_draw</location>
         </corner_coord>
-        <corner_coord board="0" x="871" y="558">
+        <corner_coord board="0" x="1301" y="832">
           <location>location_main_discard</location>
+          <location_in_action action="move_piece_at_location" args="location_main_discardtrapdoor,location_main_draw">
+            <location_in_action action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
+              <location>location_main_discardtrapdoor</location>
+            </location_in_action>
+          </location_in_action>
         </corner_coord>
       </valid_types>
       <valid_types types="dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands">
-        <corner_coord board="0" x="718" y="10">
+        <corner_coord board="0" x="1066" y="20">
           <location>location_main_encounterdraw</location>
         </corner_coord>
-        <corner_coord board="0" x="871" y="10">
+        <corner_coord board="0" x="1301" y="20">
           <location>location_main_encounterdiscard</location>
+          <location_in_action action="move_piece_at_location" args="location_main_encounterdiscardtrapdoor,location_main_encounterdraw">
+            <location_in_action action="move_piece_at_location" args="location_main_encounterdiscard,location_main_encounterdiscardtrapdoor">
+              <location>location_main_encounterdiscardtrapdoor</location>
+            </location_in_action>
+          </location_in_action>
         </corner_coord>
       </valid_types>
+    </size>
+    <size width="300" height="215">
+      <valid_types types="escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
+        <corner_coord board="0" x="1216" y="340">
+          <location>location_main_questdeck</location>
+        </corner_coord>
+      </valid_types>
+    </size>
+  </location_type>
+  <location_type type="cell">
+    <size width="215" height="100">
+      <corner_coord board="0" x="1066" y="712">
+        <location>location_main_decktrigger_discardshuffle</location>
+      </corner_coord>
+      <corner_coord board="0" x="1066" y="340">
+        <location>location_main_decktrigger_encounterdiscardshuffle</location>
+      </corner_coord>
     </size>
   </location_type>
   <!--pieces -->
@@ -69,6 +99,7 @@
   <!--pieces -->
   <!--pieces -->
   <!--pieces -->
+  <!--Deck Trigger Pieces-->
   <draggable value="0">
     <triple_tap action="move_piece" args="location_main_draw,cards_leadership_1">
       <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_0">
@@ -99,7 +130,7 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_1">
-                                                              <initial_location name="location_sphere_decktrigger_leadershipcoresolo">
+                                                              <initial_location name="location_sphere_decktriggers_0_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
                                                                   <piece>decktrigger_leadershipcoresolo</piece>
                                                                 </sides>
@@ -162,7 +193,7 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_lore_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_lore_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_lore_15_1">
-                                                              <initial_location name="location_sphere_decktrigger_lorecoresolo">
+                                                              <initial_location name="location_sphere_decktriggers_1_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LoreCoreSolo.png">
                                                                   <piece>decktrigger_lorecoresolo</piece>
                                                                 </sides>
@@ -225,7 +256,7 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_spirit_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_spirit_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_spirit_15_1">
-                                                              <initial_location name="location_sphere_decktrigger_spiritcoresolo">
+                                                              <initial_location name="location_sphere_decktriggers_2_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_SpiritCoreSolo.png">
                                                                   <piece>decktrigger_spiritcoresolo</piece>
                                                                 </sides>
@@ -288,7 +319,7 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_tactics_14">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_1">
-                                                              <initial_location name="location_sphere_decktrigger_tacticscoresolo">
+                                                              <initial_location name="location_sphere_decktriggers_3_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
                                                                   <piece>decktrigger_tacticscoresolo</piece>
                                                                 </sides>
@@ -322,7 +353,305 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_1">
+      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_0">
+        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_1">
+          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_0">
+            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_1">
+              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_2">
+                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_4_0">
+                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_4_1">
+                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_5_0">
+                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_5_1">
+                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_6">
+                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_0">
+                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_1">
+                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_2">
+                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_1">
+                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_2">
+                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_3_0">
+                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_3_1">
+                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_3_2">
+                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_3_3">
+                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_4_0">
+                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_4_1">
+                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_5_0">
+                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_passagethroughmirkwood_5_1">
+                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_1">
+                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_2_0">
+                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_2_1">
+                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_3">
+                                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_4_0">
+                                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_4_1">
+                                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_5_0">
+                                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_5_1">
+                                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_5_2">
+                                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_6_0">
+                                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_6_1">
+                                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_7">
+                                                                            <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_1">
+                                                                              <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_2">
+                                                                                <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_3">
+                                                                                  <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_4">
+                                                                                    <initial_location name="location_sphere_decktriggers_0_1">
+                                                                                      <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+                                                                                        <piece>decktrigger_passthroughmirkwood_quest</piece>
+                                                                                      </sides>
+                                                                                    </initial_location>
+                                                                                  </triple_tap>
+                                                                                </triple_tap>
+                                                                              </triple_tap>
+                                                                            </triple_tap>
+                                                                          </triple_tap>
+                                                                        </triple_tap>
+                                                                      </triple_tap>
+                                                                    </triple_tap>
+                                                                  </triple_tap>
+                                                                </triple_tap>
+                                                              </triple_tap>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_1">
+      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_0">
+        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_1">
+          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_0">
+            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_1">
+              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_2">
+                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_4_0">
+                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_4_1">
+                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_5_0">
+                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_5_1">
+                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_6">
+                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_0">
+                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_1">
+                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_2">
+                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_1_0">
+                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_1_1">
+                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_1_2">
+                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_2_0">
+                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_2_1">
+                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_3_0">
+                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_3_1">
+                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_3_2">
+                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_journeydowntheanduin_4">
+                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_1_0">
+                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_1_1">
+                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_1_2">
+                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_2_0">
+                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_2_1">
+                                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_2_2">
+                                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_3_0">
+                                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_3_1">
+                                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_4_0">
+                                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_sauronsreach_4_1">
+                                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_1_0">
+                                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_1_1">
+                                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_2_0">
+                                                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_2_1">
+                                                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_3">
+                                                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_4_0">
+                                                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_4_1">
+                                                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_5">
+                                                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_6_0">
+                                                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_6_1">
+                                                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_7_0">
+                                                                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_7_1">
+                                                                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_8_0">
+                                                                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_wilderlands_8_1">
+                                                                                                  <triple_tap action="move_piece" args="location_main_questdeck,cards_journeydowntheanduinquest_1">
+                                                                                                    <triple_tap action="move_piece" args="location_main_questdeck,cards_journeydowntheanduinquest_2">
+                                                                                                      <triple_tap action="move_piece" args="location_main_questdeck,cards_journeydowntheanduinquest_3">
+                                                                                                        <initial_location name="location_sphere_decktriggers_1_1">
+                                                                                                          <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+                                                                                                            <piece>decktrigger_journeydowntheanduin_quest</piece>
+                                                                                                          </sides>
+                                                                                                        </initial_location>
+                                                                                                      </triple_tap>
+                                                                                                    </triple_tap>
+                                                                                                  </triple_tap>
+                                                                                                </triple_tap>
+                                                                                              </triple_tap>
+                                                                                            </triple_tap>
+                                                                                          </triple_tap>
+                                                                                        </triple_tap>
+                                                                                      </triple_tap>
+                                                                                    </triple_tap>
+                                                                                  </triple_tap>
+                                                                                </triple_tap>
+                                                                              </triple_tap>
+                                                                            </triple_tap>
+                                                                          </triple_tap>
+                                                                        </triple_tap>
+                                                                      </triple_tap>
+                                                                    </triple_tap>
+                                                                  </triple_tap>
+                                                                </triple_tap>
+                                                              </triple_tap>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_1">
+      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_0">
+        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_1">
+          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_0">
+            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_1">
+              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_3_2">
+                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_4_0">
+                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_4_1">
+                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_5_0">
+                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_5_1">
+                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_6">
+                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_0">
+                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_1">
+                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_7_2">
+                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_1_0">
+                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_1_1">
+                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_2_0">
+                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_2_1">
+                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_3">
+                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_4_0">
+                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_4_1">
+                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_5_0">
+                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_5_1">
+                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_6">
+                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_7">
+                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_8">
+                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_9">
+                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_10_0">
+                                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_escapefromdolguldur_10_1">
+                                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_1">
+                                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_2_0">
+                                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_2_1">
+                                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_3">
+                                                                      <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_4_0">
+                                                                        <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_4_1">
+                                                                          <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_5_0">
+                                                                            <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_5_1">
+                                                                              <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_5_2">
+                                                                                <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_6_0">
+                                                                                  <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_6_1">
+                                                                                    <triple_tap action="move_piece" args="location_main_encounterdraw,cards_spidersofmirkwood_7">
+                                                                                      <triple_tap action="move_piece" args="location_main_questdeck,cards_escapefromdolguldurquest_1">
+                                                                                        <triple_tap action="move_piece" args="location_main_questdeck,cards_escapefromdolguldurquest_2">
+                                                                                          <triple_tap action="move_piece" args="location_main_questdeck,cards_escapefromdolguldurquest_3">
+                                                                                            <initial_location name="location_sphere_decktriggers_2_1">
+                                                                                              <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+                                                                                                <piece>decktrigger_escapefromdolguldur_quest</piece>
+                                                                                              </sides>
+                                                                                            </initial_location>
+                                                                                          </triple_tap>
+                                                                                        </triple_tap>
+                                                                                      </triple_tap>
+                                                                                    </triple_tap>
+                                                                                  </triple_tap>
+                                                                                </triple_tap>
+                                                                              </triple_tap>
+                                                                            </triple_tap>
+                                                                          </triple_tap>
+                                                                        </triple_tap>
+                                                                      </triple_tap>
+                                                                    </triple_tap>
+                                                                  </triple_tap>
+                                                                </triple_tap>
+                                                              </triple_tap>
+                                                            </triple_tap>
+                                                          </triple_tap>
+                                                        </triple_tap>
+                                                      </triple_tap>
+                                                    </triple_tap>
+                                                  </triple_tap>
+                                                </triple_tap>
+                                              </triple_tap>
+                                            </triple_tap>
+                                          </triple_tap>
+                                        </triple_tap>
+                                      </triple_tap>
+                                    </triple_tap>
+                                  </triple_tap>
+                                </triple_tap>
+                              </triple_tap>
+                            </triple_tap>
+                          </triple_tap>
+                        </triple_tap>
+                      </triple_tap>
+                    </triple_tap>
+                  </triple_tap>
+                </triple_tap>
+              </triple_tap>
+            </triple_tap>
+          </triple_tap>
+        </triple_tap>
+      </triple_tap>
+    </triple_tap>
+    <triple_tap action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
+      <initial_location name="location_main_decktrigger_discardshuffle">
+        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_DiscardShuffle.png">
+          <piece>trigger_discardshuffle</piece>
+        </sides>
+      </initial_location>
+    </triple_tap>
+    <triple_tap action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
+      <initial_location name="location_main_decktrigger_encounterdiscardshuffle">
+        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_DiscardShuffle.png">
+          <piece>trigger_encounterdiscardshuffle</piece>
+        </sides>
+      </initial_location>
+    </triple_tap>
   </draggable>
+  <!--Card Pieces-->
   <quad_tap action="shuffle_location">
     <!--Player Cards-->
     <initial_location name="location_main_cardstock">
@@ -710,44 +1039,67 @@
     </initial_location>
     <!---->
     <!--Quest Cards-->
-	<initial_location name="location_main_cardstock">
+    <initial_location name="location_main_cardstock">
       <piece_type type="escapefromdolguldurquest">
-        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_Out of the Dungeons.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_3A_Out of the Dungeons.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_3B_Out of the Dungeons.png">
           <piece count="1">cards_escapefromdolguldurquest_1</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_The Necromancers Tower.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_1A_The Necromancers Tower.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_1B_The Necromancers Tower.png">
           <piece count="1">cards_escapefromdolguldurquest_2</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_Through the Caverns.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_2A_Through the Caverns.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_2B_Through the Caverns.png">
           <piece count="1">cards_escapefromdolguldurquest_3</piece>
         </sides>
       </piece_type>
       <piece_type type="journeydowntheanduinquest">
-        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_Ambush on the Shore.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_3A_Ambush on the Shore.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_3B_Ambush on the Shore.png">
           <piece count="1">cards_journeydowntheanduinquest_1</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_Anduin Passage.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_2A_Anduin Passage.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_2B_Anduin Passage.png">
           <piece count="1">cards_journeydowntheanduinquest_2</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_To the River.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1A_To the River.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1B_To the River.png">
           <piece count="1">cards_journeydowntheanduinquest_3</piece>
         </sides>
       </piece_type>
       <piece_type type="passagethroughmirkwoodquest">
-        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_A Chosen Path_Beorns Path.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3A_A Chosen Path.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3B_A Chosen Path_Beorns Path.png">
           <piece count="1">cards_passagethroughmirkwoodquest_1</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_A Chosen Path_Dont Leave the Path.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3A_A Chosen Path.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3B_A Chosen Path_Dont Leave the Path.png">
           <piece count="1">cards_passagethroughmirkwoodquest_2</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_A Fork in the Road.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_2A_A Fork in the Road.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_2B_A Fork in the Road.png">
           <piece count="1">cards_passagethroughmirkwoodquest_3</piece>
         </sides>
-        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_Flies and Spiders.png">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_1A_Flies and Spiders.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_1B_Flies and Spiders.png">
           <piece count="1">cards_passagethroughmirkwoodquest_4</piece>
         </sides>
       </piece_type>
     </initial_location>
-
   </quad_tap>
+  <!--Token Pieces-->
+  <initial_location name="location_main_free">
+    <piece_type type="progress">
+      <sides paths="Lord of the Rings LCG_Image_Token_Progress.png">
+        <piece count="30">token_progress</piece>
+      </sides>
+    </piece_type>
+    <piece_type type="resource">
+      <sides paths="Lord of the Rings LCG_Image_Token_Resource.png">
+        <piece count="30">token_resource</piece>
+      </sides>
+    </piece_type>
+    <piece_type type="wound">
+      <sides paths="Lord of the Rings LCG_Image_Token_Wound.png">
+        <piece count="30">token_wound</piece>
+      </sides>
+    </piece_type>
+  </initial_location>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
 </game>
