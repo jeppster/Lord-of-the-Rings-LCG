@@ -13,24 +13,9 @@
   <location_type type="stack">
     <size width="143" height="200">
       <!--Main stock Locations-->
-      <valid_types types="leadership">
-        <corner_coord board="1" x="10" y="10">
-          <location>location_sphere_leadership_main</location>
-        </corner_coord>
-      </valid_types>
-      <valid_types types="lore">
-        <corner_coord board="1" x="173" y="10">
-          <location>location_sphere_lore_main</location>
-        </corner_coord>
-      </valid_types>
-      <valid_types types="spirit">
-        <corner_coord board="1" x="336" y="10">
-          <location>location_sphere_spirit_main</location>
-        </corner_coord>
-      </valid_types>
-      <valid_types types="tactics">
-        <corner_coord board="1" x="499" y="10">
-          <location>location_sphere_tactics_main</location>
+      <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
+        <corner_coord board="0" x="-200" y="0">
+          <location>location_main_cardstock</location>
         </corner_coord>
       </valid_types>
     </size>
@@ -85,7 +70,7 @@
   <!--pieces -->
   <!--pieces -->
   <draggable value="0">
-    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_1_0">
+    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_1">
       <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_0">
         <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_1">
           <triple_tap action="move_piece" args="location_main_draw,cards_leadership_3_0">
@@ -102,14 +87,14 @@
                                 <triple_tap action="move_piece" args="location_main_draw,cards_leadership_7_1">
                                   <triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_0">
                                     <triple_tap action="move_piece" args="location_main_draw,cards_leadership_8_1">
-                                      <triple_tap action="move_piece" args="location_main_draw,cards_leadership_9_0">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_leadership_9">
                                         <triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_0">
                                           <triple_tap action="move_piece" args="location_main_draw,cards_leadership_10_1">
                                             <triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_0">
                                               <triple_tap action="move_piece" args="location_main_draw,cards_leadership_11_1">
                                                 <triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_0">
                                                   <triple_tap action="move_piece" args="location_main_draw,cards_leadership_12_1">
-                                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_13_0">
+                                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_13">
                                                       <triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_0">
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_0">
@@ -155,17 +140,17 @@
             <triple_tap action="move_piece" args="location_main_draw,cards_lore_2_1">
               <triple_tap action="move_piece" args="location_main_draw,cards_lore_3_0">
                 <triple_tap action="move_piece" args="location_main_draw,cards_lore_3_1">
-                  <triple_tap action="move_piece" args="location_main_draw,cards_lore_4_0">
+                  <triple_tap action="move_piece" args="location_main_draw,cards_lore_4">
                     <triple_tap action="move_piece" args="location_main_draw,cards_lore_5_0">
                       <triple_tap action="move_piece" args="location_main_draw,cards_lore_5_1">
-                        <triple_tap action="move_piece" args="location_main_draw,cards_lore_6_0">
+                        <triple_tap action="move_piece" args="location_main_draw,cards_lore_6">
                           <triple_tap action="move_piece" args="location_main_draw,cards_lore_7_0">
                             <triple_tap action="move_piece" args="location_main_draw,cards_lore_7_1">
                               <triple_tap action="move_piece" args="location_main_draw,cards_lore_8_0">
                                 <triple_tap action="move_piece" args="location_main_draw,cards_lore_8_1">
                                   <triple_tap action="move_piece" args="location_main_draw,cards_lore_9_0">
                                     <triple_tap action="move_piece" args="location_main_draw,cards_lore_9_1">
-                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_10_0">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_10">
                                         <triple_tap action="move_piece" args="location_main_draw,cards_lore_11_0">
                                           <triple_tap action="move_piece" args="location_main_draw,cards_lore_11_1">
                                             <triple_tap action="move_piece" args="location_main_draw,cards_lore_12_0">
@@ -222,13 +207,13 @@
                     <triple_tap action="move_piece" args="location_main_draw,cards_spirit_4_1">
                       <triple_tap action="move_piece" args="location_main_draw,cards_spirit_5_0">
                         <triple_tap action="move_piece" args="location_main_draw,cards_spirit_5_1">
-                          <triple_tap action="move_piece" args="location_main_draw,cards_spirit_6_0">
+                          <triple_tap action="move_piece" args="location_main_draw,cards_spirit_6">
                             <triple_tap action="move_piece" args="location_main_draw,cards_spirit_7_0">
                               <triple_tap action="move_piece" args="location_main_draw,cards_spirit_7_1">
                                 <triple_tap action="move_piece" args="location_main_draw,cards_spirit_8_0">
                                   <triple_tap action="move_piece" args="location_main_draw,cards_spirit_8_1">
-                                    <triple_tap action="move_piece" args="location_main_draw,cards_spirit_9_0">
-                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_10_0">
+                                    <triple_tap action="move_piece" args="location_main_draw,cards_spirit_9">
+                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_10">
                                         <triple_tap action="move_piece" args="location_main_draw,cards_spirit_11_0">
                                           <triple_tap action="move_piece" args="location_main_draw,cards_spirit_11_1">
                                             <triple_tap action="move_piece" args="location_main_draw,cards_spirit_12_0">
@@ -274,7 +259,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
-    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_1_0">
+    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_1">
       <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_0">
         <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_1">
           <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_2">
@@ -289,7 +274,7 @@
                             <triple_tap action="move_piece" args="location_main_draw,cards_tactics_6_1">
                               <triple_tap action="move_piece" args="location_main_draw,cards_tactics_7_0">
                                 <triple_tap action="move_piece" args="location_main_draw,cards_tactics_7_1">
-                                  <triple_tap action="move_piece" args="location_main_draw,cards_tactics_8_0">
+                                  <triple_tap action="move_piece" args="location_main_draw,cards_tactics_8">
                                     <triple_tap action="move_piece" args="location_main_draw,cards_tactics_9_0">
                                       <triple_tap action="move_piece" args="location_main_draw,cards_tactics_9_1">
                                         <triple_tap action="move_piece" args="location_main_draw,cards_tactics_9_2">
@@ -299,8 +284,8 @@
                                                 <triple_tap action="move_piece" args="location_main_draw,cards_tactics_11_1">
                                                   <triple_tap action="move_piece" args="location_main_draw,cards_tactics_12_0">
                                                     <triple_tap action="move_piece" args="location_main_draw,cards_tactics_12_1">
-                                                      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_13_0">
-                                                        <triple_tap action="move_piece" args="location_main_draw,cards_tactics_14_0">
+                                                      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_13">
+                                                        <triple_tap action="move_piece" args="location_main_draw,cards_tactics_14">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_1">
                                                               <initial_location name="location_sphere_decktrigger_tacticscoresolo">
@@ -340,7 +325,7 @@
   </draggable>
   <quad_tap action="shuffle_location">
     <!--Player Cards-->
-    <initial_location name="location_sphere_leadership_main">
+    <initial_location name="location_main_cardstock">
       <piece_type type="leadership">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Leadership_Brok Ironfist.png">
@@ -391,8 +376,6 @@
           <piece count="2">cards_leadership_15</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_sphere_lore_main">
       <piece_type type="lore">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Lore_Daughter of the Nimrodel.png">
@@ -443,8 +426,6 @@
           <piece count="2">cards_lore_15</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_sphere_spirit_main">
       <piece_type type="spirit">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Spirit_Lorien Guide.png">
@@ -495,8 +476,6 @@
           <piece count="2">cards_spirit_15</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_sphere_tactics_main">
       <piece_type type="tactics">
         <!--allies-->
         <sides paths="Lord of the Rings LCG_Image_Ally_Tactics_Beorn.png">
@@ -550,7 +529,7 @@
     </initial_location>
     <!---->
     <!--Encounter Cards-->
-    <initial_location name="location_encounter_dolguldurorcs_main">
+    <initial_location name="location_main_cardstock">
       <piece_type type="dolguldurorcs">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Dol Guldur Orcs_Chieftan Ufthak.png">
@@ -578,8 +557,6 @@
           <piece count="3">cards_dolguldurorcs_7</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_encounter_escapefromdolguldur_main">
       <piece_type type="escapefromdolguldur">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Escape from Dol Guldur_Cavern Guardian.png">
@@ -616,8 +593,6 @@
           <piece count="2">cards_escapefromdolguldur_10</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_encounter_journeydowntheanduin_main">
       <piece_type type="journeydowntheanduin">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Journey Down the Anduin_Misty Mountain Goblins.png">
@@ -636,8 +611,6 @@
           <piece count="1">cards_journeydowntheanduin_4</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_encounter_passagethroughmirkwood_main">
       <piece_type type="passagethroughmirkwood">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Passage Through Mirkwood_Black Forest Bats.png">
@@ -659,8 +632,6 @@
         <!--objectives-->
         <!--treacheries-->
       </piece_type>
-    </initial_location>
-    <initial_location name="location_encounter_sauronsreach_main">
       <piece_type type="sauronsreach">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Saurons Reach_Eastern Crows.png">
@@ -679,8 +650,6 @@
           <piece count="2">cards_sauronsreach_4</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_encounter_spidersofmirkwoods_main">
       <piece_type type="spidersofmirkwood">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Spiders of Mirkwood_Hummerhorns.png">
@@ -708,8 +677,6 @@
           <piece count="1">cards_spidersofmirkwood_7</piece>
         </sides>
       </piece_type>
-    </initial_location>
-    <initial_location name="location_encounter_wilderlands_main">
       <piece_type type="wilderlands">
         <!--enemies-->
         <sides paths="Lord of the Rings LCG_Image_Enemy_Wilderlands_Goblin Sniper.png">
@@ -741,5 +708,46 @@
         </sides>
       </piece_type>
     </initial_location>
+    <!---->
+    <!--Quest Cards-->
+	<initial_location name="location_main_cardstock">
+      <piece_type type="escapefromdolguldurquest">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_Out of the Dungeons.png">
+          <piece count="1">cards_escapefromdolguldurquest_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_The Necromancers Tower.png">
+          <piece count="1">cards_escapefromdolguldurquest_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_Through the Caverns.png">
+          <piece count="1">cards_escapefromdolguldurquest_3</piece>
+        </sides>
+      </piece_type>
+      <piece_type type="journeydowntheanduinquest">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_Ambush on the Shore.png">
+          <piece count="1">cards_journeydowntheanduinquest_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_Anduin Passage.png">
+          <piece count="1">cards_journeydowntheanduinquest_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_To the River.png">
+          <piece count="1">cards_journeydowntheanduinquest_3</piece>
+        </sides>
+      </piece_type>
+      <piece_type type="passagethroughmirkwoodquest">
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_A Chosen Path_Beorns Path.png">
+          <piece count="1">cards_passagethroughmirkwoodquest_1</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_A Chosen Path_Dont Leave the Path.png">
+          <piece count="1">cards_passagethroughmirkwoodquest_2</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_A Fork in the Road.png">
+          <piece count="1">cards_passagethroughmirkwoodquest_3</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_Flies and Spiders.png">
+          <piece count="1">cards_passagethroughmirkwoodquest_4</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+
   </quad_tap>
 </game>
