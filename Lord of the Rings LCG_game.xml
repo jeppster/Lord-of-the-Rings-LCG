@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <game xml_version="1.5">
   <sides paths="Lord of the Rings LCG_background.png">
     <board>Main board</board>
@@ -38,48 +38,11 @@
   <!---->
   <!--Main Locations-->
   <location_type type="free">
-    <size width="1024" height="768">
+    <size width="1536" height="1152">
       <!--Main draw location-->
       <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest,progree,wound,resource">
         <corner_coord board="0" x="0" y="0">
           <location>location_main_free</location>
-        </corner_coord>
-      </valid_types>
-    </size>
-  </location_type>
-  <location_type type="stack">
-    <size width="215" height="300">
-      <valid_types types="leadership,lore,spirit,tactics">
-        <corner_coord board="0" x="1066" y="832">
-          <location>location_main_draw</location>
-        </corner_coord>
-        <corner_coord board="0" x="1301" y="832">
-          <location>location_main_discard</location>
-          <location_in_action action="move_piece_at_location" args="location_main_discardtrapdoor,location_main_draw">
-            <location_in_action action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
-              <location>location_main_discardtrapdoor</location>
-            </location_in_action>
-          </location_in_action>
-        </corner_coord>
-      </valid_types>
-      <valid_types types="dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands">
-        <corner_coord board="0" x="1066" y="20">
-          <location>location_main_encounterdraw</location>
-        </corner_coord>
-        <corner_coord board="0" x="1301" y="20">
-          <location>location_main_encounterdiscard</location>
-          <location_in_action action="move_piece_at_location" args="location_main_encounterdiscardtrapdoor,location_main_encounterdraw">
-            <location_in_action action="move_piece_at_location" args="location_main_encounterdiscard,location_main_encounterdiscardtrapdoor">
-              <location>location_main_encounterdiscardtrapdoor</location>
-            </location_in_action>
-          </location_in_action>
-        </corner_coord>
-      </valid_types>
-    </size>
-    <size width="300" height="215">
-      <valid_types types="escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
-        <corner_coord board="0" x="1216" y="340">
-          <location>location_main_questdeck</location>
         </corner_coord>
       </valid_types>
     </size>
@@ -92,6 +55,43 @@
       <corner_coord board="0" x="1066" y="340">
         <location>location_main_decktrigger_encounterdiscardshuffle</location>
       </corner_coord>
+    </size>
+  </location_type>
+  <location_type type="stack">
+    <size width="215" height="300">
+      <valid_types types="leadership,lore,spirit,tactics">
+        <corner_coord board="0" x="1066" y="832">
+          <location>location_main_draw</location>
+        </corner_coord>
+        <corner_coord board="0" x="1301" y="832">
+          <location_in_action action="move_piece_at_location" args="location_main_discardtrapdoor,location_main_draw">
+            <location_in_action action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
+              <location>location_main_discardtrapdoor</location>
+            </location_in_action>
+          </location_in_action>
+          <location>location_main_discard</location>
+        </corner_coord>
+      </valid_types>
+      <valid_types types="dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands">
+        <corner_coord board="0" x="1066" y="20">
+          <location>location_main_encounterdraw</location>
+        </corner_coord>
+        <corner_coord board="0" x="1301" y="20">
+          <location_in_action action="move_piece_at_location" args="location_main_encounterdiscardtrapdoor,location_main_encounterdraw">
+            <location_in_action action="move_piece_at_location" args="location_main_encounterdiscard,location_main_encounterdiscardtrapdoor">
+              <location>location_main_encounterdiscardtrapdoor</location>
+            </location_in_action>
+          </location_in_action>
+          <location>location_main_encounterdiscard</location>
+        </corner_coord>
+      </valid_types>
+    </size>
+    <size width="300" height="215">
+      <valid_types types="escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
+        <corner_coord board="0" x="1216" y="340">
+          <location>location_main_questdeck</location>
+        </corner_coord>
+      </valid_types>
     </size>
   </location_type>
   <!--pieces -->
@@ -643,7 +643,7 @@
         </sides>
       </initial_location>
     </triple_tap>
-    <triple_tap action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
+    <triple_tap action="move_piece_at_location" args="location_main_encounterdiscard,location_main_encounterdiscardtrapdoor">
       <initial_location name="location_main_decktrigger_encounterdiscardshuffle">
         <sides paths="Lord of the Rings LCG_Image_DeckTrigger_DiscardShuffle.png">
           <piece>trigger_encounterdiscardshuffle</piece>
