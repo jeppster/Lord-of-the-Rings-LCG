@@ -155,11 +155,17 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_leadership_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_leadership_15_1">
+			                                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_16">
+				                                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_17">
+					                                                    <triple_tap action="move_piece" args="location_main_draw,cards_leadership_18">
                                                               <initial_location name="location_sphere_decktriggers_0_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
                                                                   <piece>decktrigger_leadershipcoresolo</piece>
                                                                 </sides>
                                                               </initial_location>
+	                                                            </triple_tap>
+	                                                          </triple_tap>
+	                                                        </triple_tap>
                                                             </triple_tap>
                                                           </triple_tap>
                                                         </triple_tap>
@@ -218,11 +224,17 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_lore_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_lore_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_lore_15_1">
+						                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_16">
+							                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_17">
+							                                      <triple_tap action="move_piece" args="location_main_draw,cards_lore_18">
                                                               <initial_location name="location_sphere_decktriggers_1_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LoreCoreSolo.png">
                                                                   <piece>decktrigger_lorecoresolo</piece>
                                                                 </sides>
                                                               </initial_location>
+	                                                            </triple_tap>
+	                                                          </triple_tap>
+	                                                        </triple_tap>
                                                             </triple_tap>
                                                           </triple_tap>
                                                         </triple_tap>
@@ -281,11 +293,17 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_spirit_14_1">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_spirit_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_spirit_15_1">
+						                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_16">
+							                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_17">
+							                                      <triple_tap action="move_piece" args="location_main_draw,cards_spirit_18">
                                                               <initial_location name="location_sphere_decktriggers_2_0">
                                                                 <sides paths="Lord of the Rings LCG_Image_DeckTrigger_SpiritCoreSolo.png">
                                                                   <piece>decktrigger_spiritcoresolo</piece>
                                                                 </sides>
                                                               </initial_location>
+	                                                            </triple_tap>
+	                                                          </triple_tap>
+	                                                        </triple_tap>
                                                             </triple_tap>
                                                           </triple_tap>
                                                         </triple_tap>
@@ -344,11 +362,17 @@
                                                         <triple_tap action="move_piece" args="location_main_draw,cards_tactics_14">
                                                           <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_0">
                                                             <triple_tap action="move_piece" args="location_main_draw,cards_tactics_15_1">
-                                                              <initial_location name="location_sphere_decktriggers_3_0">
-                                                                <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
-                                                                  <piece>decktrigger_tacticscoresolo</piece>
-                                                                </sides>
-                                                              </initial_location>
+		                                                      <triple_tap action="move_piece" args="location_main_draw,cards_tactics_16">
+			                                                    <triple_tap action="move_piece" args="location_main_draw,cards_tactics_17">
+				                                                  <triple_tap action="move_piece" args="location_main_draw,cards_tactics_18">
+	                                                              <initial_location name="location_sphere_decktriggers_3_0">
+	                                                                <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+	                                                                  <piece>decktrigger_tacticscoresolo</piece>
+	                                                                </sides>
+	                                                              </initial_location>
+	                                                              </triple_tap>
+	                                                            </triple_tap>
+	                                                          </triple_tap>
                                                             </triple_tap>
                                                           </triple_tap>
                                                         </triple_tap>
@@ -729,6 +753,16 @@
         <sides paths="Lord of the Rings LCG_Image_Event_Leadership_Valiant Sacrifice.png">
           <piece count="2">cards_leadership_15</piece>
         </sides>
+        <!--heroes-->
+        <sides paths="Lord of the Rings LCG_Image_Hero_Leadership_Aragorn.png">
+          <piece count="1">cards_leadership_16</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Leadership_Gloin.png">
+          <piece count="1">cards_leadership_17</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Leadership_Theodred.png">
+          <piece count="1">cards_leadership_18</piece>
+        </sides>
       </piece_type>
       <piece_type type="lore">
         <!--allies-->
@@ -778,6 +812,16 @@
         </sides>
         <sides paths="Lord of the Rings LCG_Image_Event_Lore_Secret Paths.png">
           <piece count="2">cards_lore_15</piece>
+        </sides>
+        <!--heroes-->
+        <sides paths="Lord of the Rings LCG_Image_Hero_Lore_Beravor.png">
+          <piece count="1">cards_lore_16</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Lore_Denethor.png">
+          <piece count="1">cards_lore_17</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Lore_Glorfindel.png">
+          <piece count="1">cards_lore_18</piece>
         </sides>
       </piece_type>
       <piece_type type="spirit">
@@ -829,6 +873,16 @@
         <sides paths="Lord of the Rings LCG_Image_Event_Spirit_Will of the West.png">
           <piece count="2">cards_spirit_15</piece>
         </sides>
+        <!--heroes-->
+        <sides paths="Lord of the Rings LCG_Image_Hero_Spirit_Dunhere.png">
+          <piece count="1">cards_spirit_16</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Spirit_Eleanor.png">
+          <piece count="1">cards_spirit_17</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Spirit_Eowyn.png">
+          <piece count="1">cards_spirit_18</piece>
+        </sides>
       </piece_type>
       <piece_type type="tactics">
         <!--allies-->
@@ -879,6 +933,16 @@
         <sides paths="Lord of the Rings LCG_Image_Event_Tactics_Thicket of Spears.png">
           <piece count="2">cards_tactics_15</piece>
         </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Tactics_Gimli.png">
+          <piece count="1">cards_tactics_16</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Tactics_Legolas.png">
+          <piece count="1">cards_tactics_17</piece>
+        </sides>
+        <sides paths="Lord of the Rings LCG_Image_Hero_Tactics_Thalin.png">
+          <piece count="1">cards_tactics_18</piece>
+        </sides>
+        <!--heroes-->
       </piece_type>
     </initial_location>
     <!---->
