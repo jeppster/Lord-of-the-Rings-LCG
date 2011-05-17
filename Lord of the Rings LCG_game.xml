@@ -133,6 +133,8 @@
         <valid_types types="leadership,lore,spirit,tactics">
           <corner_coord board="0" x="1066" y="832">
             <location>location_main_draw</location>
+            <location>location_main_drawbuffer</location>
+            <location>location_main_drawtop</location>
           </corner_coord>
           <corner_coord board="0" x="1301" y="832">
             <location_in_action action="move_piece_at_location" args="location_main_discardtrapdoor,location_main_draw">
@@ -146,6 +148,8 @@
         <valid_types types="dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands">
           <corner_coord board="0" x="1066" y="20">
             <location>location_main_encounterdraw</location>
+            <location>location_main_encounterdrawbuffer</location>
+            <location>location_main_encounterdrawtop</location>
           </corner_coord>
           <corner_coord board="0" x="1301" y="20">
             <location_in_action action="move_piece_at_location" args="location_main_encounterdiscardtrapdoor,location_main_encounterdraw">
@@ -738,6 +742,24 @@
           <piece>trigger_encounterdiscardshuffle</piece>
         </sides>
       </initial_location>
+    </triple_tap>
+    <triple_tap action="move_piece_at_location" args="location_main_draw,location_main_drawtop">
+      <quad_tap action="shuffle_location" args="location_main_draw">
+        <initial_location name="location_main_drawbuffer">
+          <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
+            <piece>trigger_drawcard</piece>
+          </sides>
+        </initial_location>
+      </quad_tap>
+    </triple_tap>
+    <triple_tap action="move_piece_at_location" args="location_main_encounterdraw,location_main_encounterdrawtop">
+      <quad_tap action="shuffle_location" args="location_main_encounterdraw">
+        <initial_location name="location_main_encounterdrawbuffer">
+          <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
+            <piece>trigger_encounterdrawcard</piece>
+          </sides>
+        </initial_location>
+      </quad_tap>
     </triple_tap>
   </draggable>
   <!--Card Pieces-->
