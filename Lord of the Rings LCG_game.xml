@@ -6,6 +6,15 @@
   <sides paths="Lord of the Rings LCG_Sphereboard.png">
     <board>Sphere cards</board>
   </sides>
+  <sides paths="Lord of the Rings LCG_PlayerHandSide.png">
+    <board>Player Hand</board>
+  </sides>
+  <sides paths="Lord of the Rings LCG_PlayerHandTop.png">
+    <board>Player Hand</board>
+  </sides>
+  <sides paths="Lord of the Rings LCG_PlayerHandSide.png">
+    <board>Player Hand</board>
+  </sides>
   <!--Sphere Locations-->
   <!--Sphere Locations-->
   <!---->
@@ -35,8 +44,38 @@
   <!--END Sphere Locations-->
   <!--END Sphere Locations-->
   <!---->
+  <!--Player Hand Locations-->
+  <!--Player Hand Locations-->
   <!---->
-  <!--Main Locations-->
+  <location_type type="free">	
+    <valid_types types="leadership,lore,spirit,tactics,neutral">
+    <size width="768" height="250">
+		<location_in_action action="set_rotation" args="-90">
+        <corner_coord board="2" x="0" y="0">
+          <location>location_playerhandleft_free</location>
+        </corner_coord>
+    </location_in_action>
+		<location_in_action action="set_rotation" args="90">
+	        <corner_coord board="4" x="0" y="0">
+	          <location>location_playerhandright_free</location>
+	        </corner_coord>
+	    </location_in_action>
+    </size>	
+		    <size width="1024" height="325">
+			<location_in_action action="set_rotation" args="180">
+		        <corner_coord board="3" x="0" y="0">
+		          <location>location_playerhandtop_free</location>
+		        </corner_coord>
+		    </location_in_action>
+		    </size>
+      </valid_types>
+  </location_type>
+  <!---->
+  <!--END Player Hand Locations-->
+  <!--END Player Hand Locations-->
+  <!---->
+  <!--Main Locations-->	
+	<location_in_action action="set_rotation" args="0">
   <location_type type="cell">
     <size width="215" height="100">
       <corner_coord board="0" x="1066" y="712">
@@ -119,6 +158,8 @@
       </valid_types>
     </size>
   </location_type>
+	
+</location_in_action>
   <!--pieces -->
   <!--pieces -->
   <!--pieces -->
@@ -702,6 +743,7 @@
   </draggable>
   <!--Card Pieces-->
   <quad_tap action="shuffle_location">
+  <double_tap action="send_to_back">
     <!--Player Cards-->
     <initial_location name="location_main_cardstock">
       <piece_type type="leadership">
@@ -1166,6 +1208,7 @@
         </sides>
       </piece_type>
     </initial_location>
+  </double_tap>
   </quad_tap>
   <!--Token Pieces-->
   <initial_location name="location_main_progressstack_0_0">
