@@ -55,6 +55,13 @@
         </corner_coord>
       </valid_types>
     </size>
+    <size width="60" height="80">
+      <valid_types types="progress,wound,resource">
+        <corner_coord board="0" x="1456" y="560">
+          <location rows="3" cols="1">location_main_progressstack</location>
+        </corner_coord>
+      </valid_types>
+    </size>
   </location_type>
   <location_type type="free">
     <size width="1066" height="1152">
@@ -1097,17 +1104,21 @@
     </initial_location>
   </quad_tap>
   <!--Token Pieces-->
-  <initial_location name="location_main_free">
+  <initial_location name="location_main_progressstack_0_0">
     <piece_type type="progress">
       <sides paths="Lord of the Rings LCG_Image_Token_Progress.png">
         <piece count="30">token_progress</piece>
       </sides>
     </piece_type>
+  </initial_location>
+  <initial_location name="location_main_progressstack_0_1">
     <piece_type type="resource">
       <sides paths="Lord of the Rings LCG_Image_Token_Resource.png">
         <piece count="30">token_resource</piece>
       </sides>
     </piece_type>
+  </initial_location>
+  <initial_location name="location_main_progressstack_0_2">
     <piece_type type="wound">
       <sides paths="Lord of the Rings LCG_Image_Token_Wound.png">
         <piece count="30">token_wound</piece>
