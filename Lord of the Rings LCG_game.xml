@@ -37,16 +37,6 @@
   <!---->
   <!---->
   <!--Main Locations-->
-  <location_type type="free">
-    <size width="1536" height="1152">
-      <!--Main draw location-->
-      <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest,progree,wound,resource">
-        <corner_coord board="0" x="0" y="0">
-          <location>location_main_free</location>
-        </corner_coord>
-      </valid_types>
-    </size>
-  </location_type>
   <location_type type="cell">
     <size width="215" height="100">
       <corner_coord board="0" x="1066" y="712">
@@ -55,6 +45,41 @@
       <corner_coord board="0" x="1066" y="340">
         <location>location_main_decktrigger_encounterdiscardshuffle</location>
       </corner_coord>
+    </size>
+  </location_type>	
+  <location_type type="stack">
+    <size width="300" height="215">
+      <valid_types types="escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
+        <corner_coord board="0" x="1216" y="340">
+          <location>location_main_questdeck</location>
+        </corner_coord>
+      </valid_types>
+    </size>
+  </location_type>
+  <location_type type="free">
+    <size width="1066" height="1152">
+      <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
+        <corner_coord board="0" x="0" y="0">
+          <location>location_main_free</location>
+        </corner_coord>
+      </valid_types>
+	  <valid_types types="progress,wound,resource">
+	    <corner_coord board="0" x="0" y="0">
+	      <location>location_main_freetokens</location>
+	    </corner_coord>
+	  </valid_types>
+    </size>
+    <size width="470" height="640">
+      <valid_types types="leadership,lore,spirit,tactics,dolguldurorcs,escapefromdolguldur,journeydowntheanduin,passagethroughmirkwood,sauronsreach,spidersofmirkwood,wilderlands,escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
+        <corner_coord board="0" x="1066" y="320">
+          <location>location_main_freeside</location>
+        </corner_coord>
+      </valid_types>
+	  <valid_types types="progress,wound,resource">
+	    <corner_coord board="0" x="1066" y="320">
+	      <location>location_main_freesidetokens</location>
+	    </corner_coord>
+	  </valid_types>
     </size>
   </location_type>
   <location_type type="stack">
@@ -83,13 +108,6 @@
             </location_in_action>
           </location_in_action>
           <location>location_main_encounterdiscard</location>
-        </corner_coord>
-      </valid_types>
-    </size>
-    <size width="300" height="215">
-      <valid_types types="escapefromdolguldurquest,journeydowntheanduinquest,passagethroughmirkwoodquest">
-        <corner_coord board="0" x="1216" y="340">
-          <location>location_main_questdeck</location>
         </corner_coord>
       </valid_types>
     </size>
