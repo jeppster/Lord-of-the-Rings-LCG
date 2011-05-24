@@ -167,6 +167,15 @@
       </size>
     </location_type>
   </location_in_action>
+  <location_type type="cell">
+    <size width="60" height="60">
+      <location_display type="score">
+        <corner_coord board="0" x="1376" y="740">
+          <location>location_main_decktrigger_threat</location>
+        </corner_coord>
+      </location_display>
+    </size>
+  </location_type>
   <!--pieces -->
   <!--pieces -->
   <!--pieces -->
@@ -207,11 +216,13 @@
                                                                 <triple_tap action="move_piece" args="location_main_draw,cards_leadership_16">
                                                                   <triple_tap action="move_piece" args="location_main_draw,cards_leadership_17">
                                                                     <triple_tap action="move_piece" args="location_main_draw,cards_leadership_18">
-                                                                      <initial_location name="location_sphere_decktriggers_0_0">
-                                                                        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
-                                                                          <piece>decktrigger_leadershipcoresolo</piece>
-                                                                        </sides>
-                                                                      </initial_location>
+                                                                      <triple_tap action="set_score" args="29,trigger_threat">
+                                                                        <initial_location name="location_sphere_decktriggers_0_0">
+                                                                          <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LeadershipCoreSolo.png">
+                                                                            <piece>decktrigger_leadershipcoresolo</piece>
+                                                                          </sides>
+                                                                        </initial_location>
+                                                                      </triple_tap>
                                                                     </triple_tap>
                                                                   </triple_tap>
                                                                 </triple_tap>
@@ -278,11 +289,13 @@
                                                                 <triple_tap action="move_piece" args="location_main_draw,cards_lore_16">
                                                                   <triple_tap action="move_piece" args="location_main_draw,cards_lore_17">
                                                                     <triple_tap action="move_piece" args="location_main_draw,cards_lore_18">
-                                                                      <initial_location name="location_sphere_decktriggers_1_0">
-                                                                        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LoreCoreSolo.png">
-                                                                          <piece>decktrigger_lorecoresolo</piece>
-                                                                        </sides>
-                                                                      </initial_location>
+                                                                      <triple_tap action="set_score" args="30,trigger_threat">
+                                                                        <initial_location name="location_sphere_decktriggers_1_0">
+                                                                          <sides paths="Lord of the Rings LCG_Image_DeckTrigger_LoreCoreSolo.png">
+                                                                            <piece>decktrigger_lorecoresolo</piece>
+                                                                          </sides>
+                                                                        </initial_location>
+                                                                      </triple_tap>
                                                                     </triple_tap>
                                                                   </triple_tap>
                                                                 </triple_tap>
@@ -349,11 +362,13 @@
                                                                 <triple_tap action="move_piece" args="location_main_draw,cards_spirit_16">
                                                                   <triple_tap action="move_piece" args="location_main_draw,cards_spirit_17">
                                                                     <triple_tap action="move_piece" args="location_main_draw,cards_spirit_18">
-                                                                      <initial_location name="location_sphere_decktriggers_2_0">
-                                                                        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_SpiritCoreSolo.png">
-                                                                          <piece>decktrigger_spiritcoresolo</piece>
-                                                                        </sides>
-                                                                      </initial_location>
+                                                                      <triple_tap action="set_score" args="24,trigger_threat">
+                                                                        <initial_location name="location_sphere_decktriggers_2_0">
+                                                                          <sides paths="Lord of the Rings LCG_Image_DeckTrigger_SpiritCoreSolo.png">
+                                                                            <piece>decktrigger_spiritcoresolo</piece>
+                                                                          </sides>
+                                                                        </initial_location>
+                                                                      </triple_tap>
                                                                     </triple_tap>
                                                                   </triple_tap>
                                                                 </triple_tap>
@@ -420,11 +435,13 @@
                                                                 <triple_tap action="move_piece" args="location_main_draw,cards_tactics_16">
                                                                   <triple_tap action="move_piece" args="location_main_draw,cards_tactics_17">
                                                                     <triple_tap action="move_piece" args="location_main_draw,cards_tactics_18">
-                                                                      <initial_location name="location_sphere_decktriggers_3_0">
-                                                                        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
-                                                                          <piece>decktrigger_tacticscoresolo</piece>
-                                                                        </sides>
-                                                                      </initial_location>
+                                                                      <triple_tap action="set_score" args="29,trigger_threat">
+                                                                        <initial_location name="location_sphere_decktriggers_3_0">
+                                                                          <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+                                                                            <piece>decktrigger_tacticscoresolo</piece>
+                                                                          </sides>
+                                                                        </initial_location>
+                                                                      </triple_tap>
                                                                     </triple_tap>
                                                                   </triple_tap>
                                                                 </triple_tap>
@@ -779,6 +796,17 @@
         </initial_location>
       </quad_tap>
     </quad_tap>
+    <single_tap action="increment_score" args="1">
+      <double_tap action="decrement_score" args="1">
+        <points value="30">
+          <initial_location name="location_main_decktrigger_threat">
+            <sides paths="Lord of the Rings LCG_Image_DeckTrigger_Threat.png">
+              <piece>trigger_threat</piece>
+            </sides>
+          </initial_location>
+        </points>
+      </double_tap>
+    </single_tap>
   </draggable>
   <!--Card Pieces-->
   <quad_tap action="shuffle_location">
