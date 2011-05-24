@@ -47,28 +47,30 @@
   <!--Player Hand Locations-->
   <!--Player Hand Locations-->
   <!---->
-  <location_type type="cell">
-    <valid_types types="leadership,lore,spirit,tactics,neutral">
-      <size width="300" height="215">
-        <location_in_action action="set_rotation" args="-90">
-          <corner_coord board="2" x="0" y="0">
-            <location cols="2" rows="1">location_playerhandleft_free</location>
-          </corner_coord>
-        </location_in_action>
-        <location_in_action action="set_rotation" args="90">
-          <corner_coord board="4" x="0" y="0">
-            <location cols="2" rows="1">location_playerhandright_free</location>
-          </corner_coord>
-        </location_in_action>
-      </size>
-      <size width="215" height="300">
-        <location_in_action action="set_rotation" args="180">
-          <corner_coord board="3" x="0" y="0">
-            <location cols="4" rows="1">location_playerhandtop_free</location>
-          </corner_coord>
-        </location_in_action>
-      </size>
-    </valid_types>
+  <location_type type="stack">
+    <location_display type="count">
+      <valid_types types="leadership,lore,spirit,tactics,neutral">
+        <size width="300" height="215">
+          <location_in_action action="set_rotation" args="-90">
+            <corner_coord board="2" x="0" y="0">
+              <location cols="2" rows="1">location_playerhandleft_free</location>
+            </corner_coord>
+          </location_in_action>
+          <location_in_action action="set_rotation" args="90">
+            <corner_coord board="4" x="0" y="0">
+              <location cols="2" rows="1">location_playerhandright_free</location>
+            </corner_coord>
+          </location_in_action>
+        </size>
+        <size width="215" height="300">
+          <location_in_action action="set_rotation" args="180">
+            <corner_coord board="3" x="0" y="0">
+              <location cols="4" rows="1">location_playerhandtop_free</location>
+            </corner_coord>
+          </location_in_action>
+        </size>
+      </valid_types>
+    </location_display>
   </location_type>
   <!---->
   <!--END Player Hand Locations-->
