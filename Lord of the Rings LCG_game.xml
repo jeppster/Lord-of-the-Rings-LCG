@@ -1243,56 +1243,58 @@
       </initial_location>
       <!---->
       <!--Quest Cards-->
-      <initial_location name="location_main_cardstock">
-        <piece_type type="escapefromdolguldurquest">
-          <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_3A_Out of the Dungeons.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_3B_Out of the Dungeons.png">
-            <piece count="1">cards_escapefromdolguldurquest_1</piece>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_1A_The Necromancers Tower.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_1B_The Necromancers Tower.png">
-            <piece count="1">cards_escapefromdolguldurquest_2</piece>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_2A_Through the Caverns.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_2B_Through the Caverns.png">
-            <piece count="1">cards_escapefromdolguldurquest_3</piece>
-          </sides>
-        </piece_type>
-        <piece_type type="journeydowntheanduinquest">
-          <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_3A_Ambush on the Shore.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_3B_Ambush on the Shore.png">
-            <piece count="1">cards_journeydowntheanduinquest_1</piece>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_2A_Anduin Passage.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_2B_Anduin Passage.png">
-            <piece count="1">cards_journeydowntheanduinquest_2</piece>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1A_To the River.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1B_To the River.png">
-            <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
-              <piece count="1">cards_journeydowntheanduinquest_3</piece>
-            </triple_tap>
-          </sides>
-        </piece_type>
-        <piece_type type="passagethroughmirkwoodquest">
-          <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3A_A Chosen Path.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3B_A Chosen Path_Beorns Path.png">
-            <piece count="1">cards_passagethroughmirkwoodquest_1</piece>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3A_A Chosen Path.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3B_A Chosen Path_Dont Leave the Path.png">
-            <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
-              <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_spidersofmirkwood_2_0">
-                <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_spidersofmirkwood_3">
-                  <piece count="1">cards_passagethroughmirkwoodquest_2</piece>
+      <single_tap action="increment_side" args="wrap">
+        <initial_location name="location_main_cardstock">
+          <piece_type type="escapefromdolguldurquest">
+            <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_3A_Out of the Dungeons.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_3B_Out of the Dungeons.png">
+              <piece count="1">cards_escapefromdolguldurquest_1</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_1A_The Necromancers Tower.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_1B_The Necromancers Tower.png">
+              <piece count="1">cards_escapefromdolguldurquest_2</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_2A_Through the Caverns.png,Lord of the Rings LCG_Image_Quest_Escape from Dol Guldur_2B_Through the Caverns.png">
+              <piece count="1">cards_escapefromdolguldurquest_3</piece>
+            </sides>
+          </piece_type>
+          <piece_type type="journeydowntheanduinquest">
+            <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_3A_Ambush on the Shore.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_3B_Ambush on the Shore.png">
+              <piece count="1">cards_journeydowntheanduinquest_1</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_2A_Anduin Passage.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_2B_Anduin Passage.png">
+              <piece count="1">cards_journeydowntheanduinquest_2</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1A_To the River.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1B_To the River.png">
+              <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
+                <piece count="1">cards_journeydowntheanduinquest_3</piece>
+              </triple_tap>
+            </sides>
+          </piece_type>
+          <piece_type type="passagethroughmirkwoodquest">
+            <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3A_A Chosen Path.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3B_A Chosen Path_Beorns Path.png">
+              <piece count="1">cards_passagethroughmirkwoodquest_1</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3A_A Chosen Path.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_3B_A Chosen Path_Dont Leave the Path.png">
+              <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
+                <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_spidersofmirkwood_2_0">
+                  <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_spidersofmirkwood_3">
+                    <piece count="1">cards_passagethroughmirkwoodquest_2</piece>
+                  </triple_tap>
                 </triple_tap>
               </triple_tap>
-            </triple_tap>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_2A_A Fork in the Road.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_2B_A Fork in the Road.png">
-            <piece count="1">cards_passagethroughmirkwoodquest_3</piece>
-          </sides>
-          <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_1A_Flies and Spiders.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_1B_Flies and Spiders.png">
-            <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
-              <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_5_0">
-                <piece count="1">cards_passagethroughmirkwoodquest_4</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_2A_A Fork in the Road.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_2B_A Fork in the Road.png">
+              <piece count="1">cards_passagethroughmirkwoodquest_3</piece>
+            </sides>
+            <sides paths="Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_1A_Flies and Spiders.png,Lord of the Rings LCG_Image_Quest_Passage Through Mirkwood_1B_Flies and Spiders.png">
+              <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
+                <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_5_0">
+                  <piece count="1">cards_passagethroughmirkwoodquest_4</piece>
+                </triple_tap>
               </triple_tap>
-            </triple_tap>
-          </sides>
-        </piece_type>
-      </initial_location>
+            </sides>
+          </piece_type>
+        </initial_location>
+      </single_tap>
     </double_tap>
   </quad_tap>
   <!--Token Pieces-->
