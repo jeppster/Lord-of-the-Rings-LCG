@@ -1350,20 +1350,23 @@
   </initial_location>
   <!---->
   <!---->
-  <initial_location name="location_main_draw">
-    <piece_type type="leadership">
-      <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
-        <piece>shuffler_draw</piece>
-      </sides>
-    </piece_type>
-  </initial_location>
-  <initial_location name="location_main_encounterdraw">
-    <piece_type type="dolguldurorcs">
-      <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
-        <piece>shuffler_encounterdraw</piece>
-      </sides>
-    </piece_type>
-  </initial_location>
+  <!--shuffler pieces-->
+  <draggable value="0">
+    <initial_location name="location_main_draw">
+      <piece_type type="leadership">
+        <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
+          <piece>shuffler_draw</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+    <initial_location name="location_main_encounterdraw">
+      <piece_type type="dolguldurorcs">
+        <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
+          <piece>shuffler_encounterdraw</piece>
+        </sides>
+      </piece_type>
+    </initial_location>
+  </draggable>
   <!---->
   <!---->
   <!---->
