@@ -514,13 +514,15 @@
                                                                             <triple_tap action="shuffle_location" args="cards_spidersofmirkwood_7">
                                                                               <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_1">
                                                                                 <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_2">
-                                                                                  <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_3">
-                                                                                    <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_4">
-                                                                                      <initial_location name="location_sphere_decktriggers_0_1">
-                                                                                        <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
-                                                                                          <piece>decktrigger_passthroughmirkwood_quest</piece>
-                                                                                        </sides>
-                                                                                      </initial_location>
+                                                                                  <triple_tap action="shuffle_location" args="cards_passagethroughmirkwoodquest_2">
+                                                                                    <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_3">
+                                                                                      <triple_tap action="move_piece" args="location_main_questdeck,cards_passagethroughmirkwoodquest_4">
+                                                                                        <initial_location name="location_sphere_decktriggers_0_1">
+                                                                                          <sides paths="Lord of the Rings LCG_Image_DeckTrigger_TacticsCoreSolo.png">
+                                                                                            <piece>decktrigger_passthroughmirkwood_quest</piece>
+                                                                                          </sides>
+                                                                                        </initial_location>
+                                                                                      </triple_tap>
                                                                                     </triple_tap>
                                                                                   </triple_tap>
                                                                                 </triple_tap>
