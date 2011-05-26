@@ -142,12 +142,14 @@
               <location>location_main_drawtop</location>
             </location_in_action>
           </corner_coord>
-          <corner_coord board="0" x="1301" y="832">
+          <corner_coord board="0" x="-400" y="0">
             <location_in_action action="move_piece_at_location" args="location_main_discardtrapdoor,location_main_draw">
               <location_in_action action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
                 <location>location_main_discardtrapdoor</location>
               </location_in_action>
             </location_in_action>
+          </corner_coord>
+          <corner_coord board="0" x="1301" y="832">
             <location>location_main_discard</location>
           </corner_coord>
         </valid_types>
@@ -161,12 +163,14 @@
               <location>location_main_encounterdrawtop</location>
             </location_in_action>
           </corner_coord>
-          <corner_coord board="0" x="1301" y="20">
+          <corner_coord board="0" x="-400" y="0">
             <location_in_action action="move_piece_at_location" args="location_main_encounterdiscardtrapdoor,location_main_encounterdraw">
               <location_in_action action="move_piece_at_location" args="location_main_encounterdiscard,location_main_encounterdiscardtrapdoor">
                 <location>location_main_encounterdiscardtrapdoor</location>
               </location_in_action>
             </location_in_action>
+          </corner_coord>
+          <corner_coord board="0" x="1301" y="20">
             <location>location_main_encounterdiscard</location>
           </corner_coord>
         </valid_types>
