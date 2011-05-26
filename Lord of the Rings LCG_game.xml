@@ -191,8 +191,9 @@
   <!--pieces -->
   <!--pieces -->
   <!--pieces -->
-  <!--Deck Trigger Pieces-->
+  <!--Trigger Pieces-->
   <draggable value="0">
+    <!--Leadership Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_draw,cards_leadership_1">
       <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_0">
         <triple_tap action="move_piece" args="location_main_draw,cards_leadership_2_1">
@@ -272,6 +273,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Lore Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_draw,cards_lore_1_0">
       <triple_tap action="move_piece" args="location_main_draw,cards_lore_1_1">
         <triple_tap action="move_piece" args="location_main_draw,cards_lore_1_2">
@@ -351,6 +353,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Spirit Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_draw,cards_spirit_1_0">
       <triple_tap action="move_piece" args="location_main_draw,cards_spirit_1_1">
         <triple_tap action="move_piece" args="location_main_draw,cards_spirit_1_2">
@@ -430,6 +433,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Tactics Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_draw,cards_tactics_1">
       <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_0">
         <triple_tap action="move_piece" args="location_main_draw,cards_tactics_2_1">
@@ -509,6 +513,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Passage Through Mirkwood Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_1">
       <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_0">
         <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_1">
@@ -598,6 +603,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Journey Down the Anduin Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_1">
       <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_0">
         <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_1">
@@ -705,6 +711,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Escape from Dol Guldur Deck Setup Trigger-->
     <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_1">
       <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_0">
         <triple_tap action="move_piece" args="location_main_encounterdraw,cards_dolguldurorcs_2_1">
@@ -800,6 +807,7 @@
         </triple_tap>
       </triple_tap>
     </triple_tap>
+    <!--Discard Reshuffle Triggers-->
     <triple_tap action="move_piece_at_location" args="location_main_discard,location_main_discardtrapdoor">
       <initial_location name="location_main_decktrigger_discardshuffle">
         <sides paths="Lord of the Rings LCG_Image_DeckTrigger_DiscardShuffle.png">
@@ -814,24 +822,30 @@
         </sides>
       </initial_location>
     </triple_tap>
-    <quad_tap action="shuffle_location" args="shuffler_draw">
-      <quad_tap action="send_to_back" args="shuffler_draw">
-        <initial_location name="location_main_drawbuffer">
-          <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
-            <piece>trigger_drawcard</piece>
-          </sides>
-        </initial_location>
+    <!--Player/Encounter Shuffle Triggers/visual block pieces-->
+    <quad_tap action="move_piece" args="location_main_draw,shuffler_draw">
+      <quad_tap action="shuffle_location" args="shuffler_draw">
+        <quad_tap action="move_piece" args="location_main_cardstock,shuffler_draw">
+          <initial_location name="location_main_drawbuffer">
+            <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
+              <piece>trigger_drawcard</piece>
+            </sides>
+          </initial_location>
+        </quad_tap>
       </quad_tap>
     </quad_tap>
-    <quad_tap action="shuffle_location" args="shuffler_encounterdraw">
-      <quad_tap action="send_to_back" args="shuffler_encounterdraw">
-        <initial_location name="location_main_encounterdrawbuffer">
-          <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
-            <piece>trigger_encounterdrawcard</piece>
-          </sides>
-        </initial_location>
+    <quad_tap action="move_piece" args="location_main_encounterdraw,shuffler_encounterdraw">
+      <quad_tap action="shuffle_location" args="shuffler_encounterdraw">
+        <quad_tap action="move_piece" args="location_main_cardstock,shuffler_encounterdraw">
+          <initial_location name="location_main_encounterdrawbuffer">
+            <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
+              <piece>trigger_encounterdrawcard</piece>
+            </sides>
+          </initial_location>
+        </quad_tap>
       </quad_tap>
     </quad_tap>
+    <!--Threat Level Score changer-->
     <single_tap action="increment_score" args="1">
       <double_tap action="decrement_score" args="1">
         <points value="30">
@@ -1363,20 +1377,20 @@
   <!---->
   <!--shuffler pieces-->
   <draggable value="0">
-    <initial_location name="location_main_draw">
-      <piece_type type="leadership">
-        <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
-          <piece>shuffler_draw</piece>
-        </sides>
-      </piece_type>
-    </initial_location>
-    <initial_location name="location_main_encounterdraw">
-      <piece_type type="dolguldurorcs">
-        <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
-          <piece>shuffler_encounterdraw</piece>
-        </sides>
-      </piece_type>
-    </initial_location>
+    <points value="0">
+      <initial_location name="location_main_cardstock">
+        <piece_type type="leadership">
+          <sides paths="Lord of the Rings LCG_Image_Back_Player.png">
+            <piece>shuffler_draw</piece>
+          </sides>
+        </piece_type>
+        <piece_type type="dolguldurorcs">
+          <sides paths="Lord of the Rings LCG_Image_Back_Encounter.png">
+            <piece>shuffler_encounterdraw</piece>
+          </sides>
+        </piece_type>
+      </initial_location>
+    </points>
   </draggable>
   <!---->
   <!---->
