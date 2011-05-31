@@ -1317,7 +1317,7 @@
                 <piece count="1">cards_journeydowntheanduinquest_2</piece>
               </sides>
               <sides paths="Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1A_To the River.png,Lord of the Rings LCG_Image_Quest_Journey Down the Anduin_1B_To the River.png">
-                <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_passagethroughmirkwood_3_0">
+                <triple_tap action="move_piece" args="location_main_encounterdrawtop,cards_wilderlands_2_0">
                   <piece count="1">cards_journeydowntheanduinquest_3</piece>
                 </triple_tap>
               </sides>
